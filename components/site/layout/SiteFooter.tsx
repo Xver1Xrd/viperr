@@ -4,12 +4,12 @@ import { PageContainer } from "./PageContainer";
 
 const footerLinks = [
   {
-    label: "Apple Music · Kai Angel",
-    href: "https://music.apple.com/us/artist/kai-angel/1617297110",
+    label: "Spotify · Kai Angel",
+    href: "https://open.spotify.com/artist/1pxLlPRiWRUBGdSOrVL4f0",
   },
   {
-    label: "Apple Music · 9mice",
-    href: "https://music.apple.com/us/artist/9mice/1593955534",
+    label: "Spotify · 9mice",
+    href: "https://open.spotify.com/artist/3v0qTkZvuro4johOZyIhOm",
   },
   {
     label: "BandLink",
@@ -31,7 +31,7 @@ export function SiteFooter() {
           </div>
           <p className="max-w-xl text-sm leading-7 text-white/62">
             Многостраничный сайт о Kai Angel и 9mice с отдельными страницами артистов,
-            каталогом релизов, реальными 30-секундными превью Apple Music и аккуратной
+            каталогом релизов, реальными 30-секундными превью и аккуратной
             галереей.
           </p>
         </div>

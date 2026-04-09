@@ -166,13 +166,13 @@ export function PageHero({
           <div className="relative overflow-hidden rounded-[36px] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.04))] p-4 shadow-[0_32px_80px_rgba(0,0,0,0.35)]">
             <div className="relative overflow-hidden rounded-[30px] border border-white/10 bg-[#0c111d]">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_55%)]" />
-              <div className="relative aspect-[4/4.4]">
+              <div className="relative aspect-[1/1.02] sm:aspect-[4/4.3]">
                 <Image
                   src={image}
                   alt={imageAlt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
-                  className="object-cover"
+                  className="object-cover object-center"
                   priority
                 />
               </div>

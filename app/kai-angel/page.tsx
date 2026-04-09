@@ -18,7 +18,7 @@ const galleryItems = getGalleryItemsByIds(artist.galleryIds);
 export const metadata = createPageMetadata({
   title: "Kai Angel",
   description:
-    "Отдельная страница Kai Angel: сольные релизы, рабочие Apple Music previews, галерея и подтверждённые внешние ссылки.",
+    "Отдельная страница Kai Angel: сольные релизы, рабочие превью, галерея и подтверждённые внешние ссылки.",
   pathname: "/kai-angel",
 });
 
@@ -31,8 +31,8 @@ export default function KaiAngelPage() {
           title="Kai Angel"
           description={artist.heroCopy}
           quote={artist.heroQuote}
-          image={artist.image}
-          imageAlt={artist.imageAlt}
+          image={artist.heroImage ?? artist.image}
+          imageAlt={artist.heroImageAlt ?? artist.imageAlt}
           accent="crimson"
           breadcrumbs={[
             { label: "Главная", href: "/" },
@@ -41,8 +41,8 @@ export default function KaiAngelPage() {
           actions={[
             { label: "Смотреть релизы", href: "/releases" },
             {
-              label: "Apple Music",
-              href: "https://music.apple.com/us/artist/kai-angel/1617297110",
+              label: "Spotify",
+              href: "https://open.spotify.com/artist/1pxLlPRiWRUBGdSOrVL4f0",
               variant: "secondary",
               external: true,
             },
@@ -96,8 +96,8 @@ export default function KaiAngelPage() {
         <section className="space-y-10">
           <SectionHeading
             eyebrow="Audio"
-            title="Официальные превью Kai Angel"
-            description="Это реальные 30-секундные аудио-превью Apple Music. Сайт не имитирует проигрывание: кнопка либо запускает звук, либо ведёт на релиз."
+            title="Треки и прямые переходы Kai Angel"
+            description="В блоке собраны один встроенный Apple Music-фрагмент и три честные внешние ссылки на треки, которые ты просил вывести на страницу. Если кнопка играет звук, значит звук реально есть на сайте."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {tracks.map((track, index) => (

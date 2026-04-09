@@ -7,6 +7,9 @@ type ReleaseCardProps = {
 };
 
 export function ReleaseCard({ release }: ReleaseCardProps) {
+  const href = release.spotifyUrl ?? release.appleUrl;
+  const label = release.spotifyUrl ? "Открыть в Spotify" : "Открыть в Apple Music";
+
   return (
     <article className="group overflow-hidden rounded-[30px] border border-white/10 bg-white/6 shadow-[0_24px_70px_rgba(0,0,0,0.24)] transition-transform duration-300 hover:-translate-y-1">
       <div className="grid gap-5 p-5 sm:p-6">
@@ -47,12 +50,12 @@ export function ReleaseCard({ release }: ReleaseCardProps) {
         <p className="text-sm leading-7 text-white/66">{release.detail}</p>
 
         <a
-          href={release.appleUrl}
+          href={href}
           target="_blank"
           rel="noreferrer"
           className="inline-flex min-h-12 items-center justify-between rounded-full border border-white/12 bg-white/6 px-5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/10"
         >
-          Открыть в Apple Music
+          {label}
           <ArrowUpRight size={16} />
         </a>
       </div>

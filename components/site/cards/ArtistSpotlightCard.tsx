@@ -22,16 +22,16 @@ export function ArtistSpotlightCard({ artist }: ArtistSpotlightCardProps) {
           accentClass[artist.accent],
         )}
       />
-      <div className="relative grid gap-6 p-5 sm:p-6 lg:grid-cols-[0.95fr_1.05fr]">
+      <div className="relative grid gap-6 p-5 sm:p-6 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-[#0c111a]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_55%)]" />
-          <div className="relative aspect-[4/4.6]">
+          <div className="relative aspect-[1/1.08] sm:aspect-[4/4.3]">
             <Image
               src={artist.image}
               alt={artist.imageAlt}
               fill
               sizes="(max-width: 1024px) 100vw, 36vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
             />
           </div>
         </div>

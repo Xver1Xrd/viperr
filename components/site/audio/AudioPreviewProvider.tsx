@@ -122,7 +122,7 @@ export function AudioPreviewProvider({ children }: { children: ReactNode }) {
   const toggleTrack = (track: PreviewTrack) => {
     const audio = audioRef.current;
 
-    if (!audio) {
+    if (!audio || !track.previewUrl) {
       return;
     }
 

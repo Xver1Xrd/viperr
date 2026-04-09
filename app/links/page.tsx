@@ -11,7 +11,7 @@ import { artists, linkGroups } from "@/lib/site-data";
 export const metadata = createPageMetadata({
   title: "Ссылки",
   description:
-    "Страница ссылок VIPERR: Apple Music, BandLink, SoundCloud, YouTube и полезные внутренние маршруты сайта.",
+    "Страница ссылок VIPERR: Spotify, BandLink, SoundCloud, YouTube и полезные внутренние маршруты сайта.",
   pathname: "/links",
 });
 
@@ -36,7 +36,7 @@ export default function LinksPage() {
           ]}
           metrics={[
             { label: "Групп ссылок", value: String(linkGroups.length) },
-            { label: "Есть внутри", value: "Apple / BandLink / SoundCloud / YouTube" },
+            { label: "Есть внутри", value: "Spotify / BandLink / SoundCloud / YouTube" },
             { label: "Фокус страницы", value: "полезность" },
           ]}
         />

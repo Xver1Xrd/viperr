@@ -9,7 +9,7 @@ import { releases } from "@/lib/site-data";
 export const metadata = createPageMetadata({
   title: "Релизы",
   description:
-    "Каталог релизов Kai Angel и 9mice: даты, подписи, обложки и быстрые переходы на Apple Music.",
+    "Каталог релизов Kai Angel и 9mice: даты, подписи, обложки и быстрые переходы на Spotify и Apple Music.",
   pathname: "/releases",
 });
 
@@ -20,7 +20,7 @@ export default function ReleasesPage() {
         <PageHero
           eyebrow="Discography"
           title="Релизы"
-          description="Каталог собран как практическая страница: есть даты, подписи, визуалы, быстрый фильтр по артистам и прямые ссылки на Apple Music. Это не хаотичная сетка, а понятный архив внутри сайта."
+          description="Каталог собран как практическая страница: есть даты, подписи, визуалы, быстрый фильтр по артистам и прямые ссылки на Spotify там, где он подтверждён. Для остального сохранён аккуратный fallback на Apple Music."
           image="/media/covers/heavy-metal-2.jpg"
           imageAlt="Обложка альбома Heavy Metal 2"
           accent="violet"
@@ -35,7 +35,7 @@ export default function ReleasesPage() {
           metrics={[
             { label: "Карточек в каталоге", value: String(releases.length) },
             { label: "Диапазон по годам", value: "2021 → 2025" },
-            { label: "Источник переходов", value: "Apple Music" },
+            { label: "Источник переходов", value: "Spotify → Apple fallback" },
           ]}
         />
       </PageContainer>
@@ -64,7 +64,7 @@ export default function ReleasesPage() {
             },
             {
               title: "Переходы на площадки",
-              text: "У каждой карточки есть прямой выход на Apple Music. Так страница не заканчивается на описании, а продолжает пользовательский маршрут.",
+              text: "У каждой карточки есть прямой выход на Spotify там, где он найден, и fallback на Apple Music для остальных релизов. Так страница не заканчивается на описании, а продолжает пользовательский маршрут.",
             },
           ].map((item, index) => (
             <Reveal key={item.title} delay={index * 0.05}>

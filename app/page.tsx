@@ -38,8 +38,8 @@ export default function HomePage() {
         <PageHero
           eyebrow="Multi-page music project"
           title="Kai Angel + 9mice"
-          description="VIPERR собирает в одном месте ключевые релизы, отдельные страницы артистов, реальные 30-секундные превью Apple Music, галерею и быстрые переходы на официальные площадки. Это не одностраничный концепт, а готовый музыкальный сайт с понятной структурой."
-          quote="На сайте нет фейкового плеера: если рядом с треком есть кнопка прослушивания, она запускает реальное официальное превью."
+          description="VIPERR собирает в одном месте ключевые релизы, отдельные страницы артистов, рабочие Apple Music-превью, Spotify-маршруты, архивные внешние ссылки, галерею и быстрые переходы на официальные площадки. Это не одностраничный концепт, а готовый музыкальный сайт с понятной структурой."
+          quote="На сайте нет фальшивого плеера: если у карточки есть встроенное превью, оно реально играет. Если превью нет, карточка честно ведёт на внешнюю платформу."
           image="/media/artists/duo-bandlink.jpeg"
           imageAlt="Kai Angel и 9mice"
           accent="violet"
@@ -107,9 +107,9 @@ export default function HomePage() {
 
         <section className="space-y-10">
           <SectionHeading
-            eyebrow="Official Audio Previews"
-            title="Рабочие аудио-превью"
-            description="Все кнопки ниже запускают официальные 30-секундные превью из Apple Music. Это честный аудио-блок без имитации звука и без бутафорского интерфейса."
+            eyebrow="Listen"
+            title="Подборка для прослушивания"
+            description="В блоке ниже собраны и встроенные Apple Music-превью, и прямые переходы на внешние платформы. Формат каждой карточки показан честно, без поддельного play."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {featuredTracks.map((track, index) => (
@@ -164,7 +164,7 @@ export default function HomePage() {
               <Reveal className="surface-card overflow-hidden">
                 <div className="relative aspect-[16/10]">
                   <Image
-                    src={galleryPreview[2]?.src ?? "/media/artists/9mice.png"}
+                    src={galleryPreview[2]?.src ?? "/media/artists/9mice-portrait.jpg"}
                     alt={galleryPreview[2]?.alt ?? "9mice"}
                     fill
                     sizes="(max-width: 1024px) 100vw, 33vw"
@@ -235,7 +235,7 @@ export default function HomePage() {
               {
                 href: "/links",
                 title: "Ссылки и площадки",
-                text: "Практическая страница с BandLink, Apple Music, SoundCloud и YouTube.",
+                text: "Практическая страница со Spotify, BandLink, SoundCloud и YouTube.",
               },
             ].map((item, index) => (
               <Reveal key={item.href} delay={index * 0.05}>

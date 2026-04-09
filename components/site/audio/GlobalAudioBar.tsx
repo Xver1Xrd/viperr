@@ -77,12 +77,12 @@ export function GlobalAudioBar() {
                 {isPlaying ? <Pause size={18} /> : <Play size={18} />}
               </button>
               <a
-                href={currentTrack.appleUrl}
+                href={currentTrack.listenUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/12 bg-white/6 px-4 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
               >
-                Apple Music
+                {currentTrack.platformLabel}
                 <ExternalLink size={15} />
               </a>
               <button

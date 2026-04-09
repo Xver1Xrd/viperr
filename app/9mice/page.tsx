@@ -18,7 +18,7 @@ const galleryItems = getGalleryItemsByIds(artist.galleryIds);
 export const metadata = createPageMetadata({
   title: "9mice",
   description:
-    "Отдельная страница 9mice: сольные релизы, рабочие Apple Music previews, медиа и подтверждённые платформы.",
+    "Отдельная страница 9mice: сольные релизы, рабочие превью, медиа и подтверждённые платформы.",
   pathname: "/9mice",
 });
 
@@ -41,8 +41,8 @@ export default function NineMicePage() {
           actions={[
             { label: "Слушать превью", href: "#audio" },
             {
-              label: "Apple Music",
-              href: "https://music.apple.com/us/artist/9mice/1593955534",
+              label: "Spotify",
+              href: "https://open.spotify.com/artist/3v0qTkZvuro4johOZyIhOm",
               variant: "secondary",
               external: true,
             },
@@ -88,12 +88,12 @@ export default function NineMicePage() {
                     <div className="mt-2 font-display text-3xl text-white">{release.title}</div>
                     <p className="mt-3 text-sm leading-7 text-white/64">{release.detail}</p>
                     <a
-                      href={release.appleUrl}
+                      href={release.spotifyUrl ?? release.appleUrl}
                       target="_blank"
                       rel="noreferrer"
                       className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-white/12 bg-white/6 px-4 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
                     >
-                      Открыть релиз
+                      {release.spotifyUrl ? "Открыть в Spotify" : "Открыть в Apple Music"}
                       <ExternalLink size={15} />
                     </a>
                   </div>
@@ -106,8 +106,8 @@ export default function NineMicePage() {
         <section id="audio" className="space-y-10">
           <SectionHeading
             eyebrow="Audio"
-            title="Официальные превью 9mice"
-            description="Здесь собраны рабочие 30-секундные фрагменты. Блок намеренно сделан практичным: включение, пауза, прогресс и прямой переход на Apple Music."
+            title="Треки и площадки 9mice"
+            description="Здесь собраны три встроенных Apple Music-превью и один прямой внешний переход для трека, у которого на сайте не подтверждён отдельный фрагмент. Интерфейс остаётся честным: без фейкового play и псевдо-waveform."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {tracks.map((track, index) => (
