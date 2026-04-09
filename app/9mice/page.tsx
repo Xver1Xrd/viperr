@@ -18,7 +18,7 @@ const galleryItems = getGalleryItemsByIds(artist.galleryIds);
 export const metadata = createPageMetadata({
   title: "9mice",
   description:
-    "Отдельная страница 9mice: сольные релизы, рабочие превью, медиа и подтверждённые платформы.",
+    "9mice: сольные релизы, четыре трека для быстрого входа, визуальный блок и основные ссылки.",
   pathname: "/9mice",
 });
 
@@ -39,7 +39,7 @@ export default function NineMicePage() {
             { label: "9mice" },
           ]}
           actions={[
-            { label: "Слушать превью", href: "#audio" },
+            { label: "Слушать треки", href: "#audio" },
             {
               label: "Spotify",
               href: "https://open.spotify.com/artist/3v0qTkZvuro4johOZyIhOm",
@@ -106,8 +106,8 @@ export default function NineMicePage() {
         <section id="audio" className="space-y-10">
           <SectionHeading
             eyebrow="Audio"
-            title="Рабочие превью 9mice"
-            description="В подборке ниже оставлены только треки с реальным звуком. Все карточки можно включить прямо на странице без пустых внешних заглушек."
+            title="Четыре трека 9mice"
+            description="В этой четвёрке лучше всего слышно, как у 9mice работают темп, холодный свет и мелодия, которая цепляет сразу."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {tracks.map((track, index) => (
@@ -123,7 +123,7 @@ export default function NineMicePage() {
             <SectionHeading
               eyebrow="Releases"
               title="Сольный каталог и общие точки входа"
-              description="В каталоге 9mice есть и собственные релизы, и совместные работы, если они важны для общей картины проекта."
+              description="Здесь собраны сольные релизы 9mice и общие работы, которые лучше всего показывают его линию."
             />
             <Link
               href="/releases"
@@ -146,8 +146,8 @@ export default function NineMicePage() {
         <section className="space-y-10">
           <SectionHeading
             eyebrow="Visuals"
-            title="Медиа-блок 9mice"
-            description="Эта страница построена холоднее и чище, поэтому галерея здесь собрана как связка portrait + cover-wall + общий кадр проекта."
+            title="Кадры и обложки 9mice"
+            description="Портрет, обложки и холодный визуальный тон здесь работают так же сильно, как и сама музыка 9mice."
           />
           <div className="grid gap-4 lg:grid-cols-[0.88fr_1.12fr]">
             <Reveal className="surface-card overflow-hidden">
@@ -198,7 +198,7 @@ export default function NineMicePage() {
           <SectionHeading
             eyebrow="Links"
             title="Площадки 9mice"
-            description="Ссылки ниже подобраны так, чтобы оставаться полезными: никакой неподтверждённой мишуры, только рабочие переходы."
+            description="Главные площадки, где можно дальше слушать 9mice и быстро открыть релизы, видео и другие материалы."
           />
           <div className="grid gap-4 md:grid-cols-3">
             {artist.links.map((item, index) => (

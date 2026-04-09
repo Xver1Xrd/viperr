@@ -9,7 +9,7 @@ import { galleryItems } from "@/lib/site-data";
 export const metadata = createPageMetadata({
   title: "Галерея",
   description:
-    "Галерея VIPERR: изображения артистов, обложки релизов и видео-кадры в отдельной медиа-странице с lightbox.",
+    "Галерея VIPERR: портреты артистов, обложки релизов и кадры, которые держат общий визуальный код проекта.",
   pathname: "/gallery",
 });
 
@@ -20,7 +20,7 @@ export default function GalleryPage() {
         <PageHero
           eyebrow="Media"
           title="Галерея"
-          description="Здесь собраны реальные медиафайлы из проекта: artist-изображения, cover art и видео-кадры. Страница работает как отдельный visual archive, а не как случайная сетка картинок."
+          description="Здесь собраны портреты артистов, обложки релизов и кадры, которые лучше всего передают визуальный тон VIPERR."
           image="/media/artists/duo-bandlink.jpeg"
           imageAlt="Kai Angel и 9mice"
           accent="violet"
@@ -45,7 +45,7 @@ export default function GalleryPage() {
           <SectionHeading
             eyebrow="Media Grid"
             title="Полная визуальная сетка"
-            description="В отличие от прошлой версии, здесь есть настоящие изображения, а не пустые блоки. Любую карточку можно раскрыть в отдельный lightbox."
+            description="Портреты, постеры, обложки и общие кадры собраны в одну плотную сетку, чтобы лучше видеть, как рядом работают образ, музыка и обложка."
           />
           <Reveal>
             <GalleryMasonry items={galleryItems} />
@@ -55,21 +55,21 @@ export default function GalleryPage() {
         <section className="grid gap-4 md:grid-cols-3">
           {[
             {
-              title: "Artist images",
-              text: "Официальные artist-изображения помогают удерживать лицо проекта, а не подменять его абстрактной графикой.",
+              title: "Портреты",
+              text: "Крупные портреты удерживают лица артистов в центре и не дают визуалу распадаться на просто красивые фоны.",
             },
             {
-              title: "Cover archive",
-              text: "Обложки релизов встроены в галерею как часть общей истории: это и музыкальный архив, и рабочий визуальный слой.",
+              title: "Обложки",
+              text: "Обложки здесь важны не меньше фото: по ним хорошо видно, как менялись масштаб, энергия и тон релизов.",
             },
             {
-              title: "Video stills",
-              text: "Кадры из видео добавляют живое движение и не дают галерее превратиться в просто витрину квадратных картинок.",
+              title: "Живые кадры",
+              text: "Кадры добавляют движение и воздух, чтобы галерея не выглядела просто стеной квадратных картинок.",
             },
           ].map((item, index) => (
             <Reveal key={item.title} delay={index * 0.05}>
               <div className="surface-card h-full p-6">
-                <div className="club-tag">Source layer</div>
+                <div className="club-tag">Слой</div>
                 <div className="mt-3 font-display text-3xl text-white">{item.title}</div>
                 <p className="mt-3 text-sm leading-7 text-white/64">{item.text}</p>
               </div>

@@ -149,8 +149,8 @@ export function GalleryMasonry({ items }: GalleryMasonryProps) {
                   <div className="font-display text-4xl text-white">{activeItem.title}</div>
                   <p className="text-base leading-8 text-white/68">{activeItem.caption}</p>
                   <div className="club-inset p-4 text-sm leading-7 text-white/58">
-                    Эта галерея собрана из реальных файлов внутри проекта: официальных artist-изображений,
-                    видео-кадров и обложек релизов.
+                    Внутри собраны портреты артистов, кадры и обложки релизов, которые держат общий
+                    визуальный тон VIPERR.
                   </div>
                 </div>
               </div>

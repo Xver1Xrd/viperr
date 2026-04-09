@@ -62,7 +62,7 @@ export function ArtistSpotlightCard({ artist }: ArtistSpotlightCardProps) {
               href={`/${artist.slug}`}
               className="club-button"
             >
-              Открыть страницу
+              Открыть профиль
               <ArrowRight size={16} />
             </Link>
             <Link

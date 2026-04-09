@@ -18,7 +18,7 @@ const galleryItems = getGalleryItemsByIds(artist.galleryIds);
 export const metadata = createPageMetadata({
   title: "Kai Angel",
   description:
-    "Отдельная страница Kai Angel: сольные релизы, рабочие превью, галерея и подтверждённые внешние ссылки.",
+    "Kai Angel: сольные релизы, четыре трека для быстрого входа, выбранные кадры и основные ссылки.",
   pathname: "/kai-angel",
 });
 
@@ -54,7 +54,7 @@ export default function KaiAngelPage() {
       <PageContainer className="section-space space-y-24">
         <section className="grid gap-6 xl:grid-cols-[0.82fr_1.18fr]">
           <Reveal className="surface-card p-6 sm:p-8">
-            <div className="club-tag">Об этой странице</div>
+            <div className="club-tag">Kai Angel</div>
             <p className="mt-4 text-base leading-8 text-white/68">{artist.intro}</p>
             <Link
               href="/links"
@@ -69,7 +69,7 @@ export default function KaiAngelPage() {
             {artist.features.map((feature, index) => (
               <Reveal key={feature.title} delay={index * 0.06}>
                 <div className="surface-card h-full p-6">
-                  <div className="club-tag">Focus</div>
+                  <div className="club-tag">Акцент</div>
                   <h2 className="mt-3 font-display text-2xl text-white">{feature.title}</h2>
                   <p className="mt-3 text-sm leading-7 text-white/64">{feature.text}</p>
                 </div>
@@ -82,7 +82,7 @@ export default function KaiAngelPage() {
           <SectionHeading
             eyebrow="Kai Angel Releases"
             title="Сольные и общие релизы"
-            description="На странице Kai Angel есть и его сольные релизы, и совместные записи, если они важны для понимания общей линии проекта."
+            description="Здесь собраны сольные релизы Kai Angel и те совместные записи, без которых его линию уже трудно представить."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {releases.map((release, index) => (
@@ -96,8 +96,8 @@ export default function KaiAngelPage() {
         <section className="space-y-10">
           <SectionHeading
             eyebrow="Audio"
-            title="Рабочие превью Kai Angel"
-            description="Здесь оставлены только треки с реальным встроенным звуком. Все четыре карточки ниже запускают рабочие 30-секундные preview-фрагменты."
+            title="Четыре трека Kai Angel"
+            description="Подборка держится на напряжении, мелодии и холодной подаче: от раннего JUMP! до более позднего damage."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {tracks.map((track, index) => (
@@ -112,8 +112,8 @@ export default function KaiAngelPage() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHeading
               eyebrow="Visuals"
-              title="Короткая галерея Kai Angel"
-              description="Внутри страницы собраны artist-image, видео-кадр и ключевые обложки. Полная медиа-страница находится отдельно."
+              title="Кадры и обложки"
+              description="Портрет, жёсткий крупный план и обложки релизов собирают тот самый образ, на котором держится Kai Angel."
             />
             <Link
               href="/gallery"
@@ -177,8 +177,8 @@ export default function KaiAngelPage() {
         <section className="space-y-8">
           <SectionHeading
             eyebrow="Links"
-            title="Официальные переходы"
-            description="На этой странице сохранены только рабочие публичные переходы, которые можно безопасно использовать как базовые."
+            title="Слушать дальше"
+            description="Основные площадки, где можно дальше слушать Kai Angel и быстро открыть релизы, видео и другие материалы."
           />
           <div className="grid gap-4 md:grid-cols-3">
             {artist.links.map((item, index) => (

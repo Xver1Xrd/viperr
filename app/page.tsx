@@ -23,7 +23,7 @@ import {
 export const metadata = createPageMetadata({
   title: "Главная",
   description:
-    "Главная страница VIPERR: Kai Angel и 9mice, отдельные страницы артистов, каталог релизов, галерея и рабочие официальные аудио-превью.",
+    "VIPERR: Kai Angel и 9mice, ключевые релизы, выбранные треки, визуальный архив и основные ссылки.",
   pathname: "/",
 });
 
@@ -36,10 +36,10 @@ export default function HomePage() {
     <>
       <PageContainer>
         <PageHero
-          eyebrow="Multi-page music project"
+          eyebrow="VIPERR archive"
           title="Kai Angel + 9mice"
-          description="VIPERR собирает в одном месте ключевые релизы, отдельные страницы артистов, рабочие Apple Music-превью, Spotify-маршруты, архивные внешние ссылки, галерею и быстрые переходы на официальные площадки. Это не одностраничный концепт, а готовый музыкальный сайт с понятной структурой."
-          quote="На сайте нет фальшивого плеера: если у карточки есть кнопка play, она запускает реальное официальное превью."
+          description="Kai Angel и 9mice идут рядом, но звучат по-разному: у одного больше драматичной собранности, у второго больше клубного давления, скорости и прямого хука."
+          quote="Их сила в контрасте: у Kai Angel больше драматичной собранности, у 9mice — клубного давления и прямого хука."
           image="/media/artists/duo-bandlink.jpeg"
           imageAlt="Kai Angel и 9mice"
           accent="violet"
@@ -68,8 +68,8 @@ export default function HomePage() {
         <section className="space-y-10">
           <SectionHeading
             eyebrow="Artists"
-            title="Две отдельные страницы, два разных акцента"
-            description="Kai Angel и 9mice разведены по отдельным маршрутам не формально, а по подаче. У каждой страницы свой ритм, свой цветовой акцент и своя логика контента."
+            title="Две линии, два характера"
+            description="Kai Angel и 9mice работают рядом, но ощущаются по-разному. Один держится на драматичном контроле, второй — на темпе, холоде и мгновенном припеве."
           />
           <div className="grid gap-6 xl:grid-cols-2">
             <Reveal>
@@ -86,7 +86,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Releases"
               title="Выбранные релизы"
-              description="На главной показаны три больших точки входа. Полный каталог с датами и быстрым фильтром собран на отдельной странице releases."
+              description="Три релиза, через которые проще всего почувствовать масштаб VIPERR: сольные пики, совместный центр тяжести и общий визуальный код."
             />
             <Link
               href="/releases"
@@ -108,8 +108,8 @@ export default function HomePage() {
         <section className="space-y-10">
           <SectionHeading
             eyebrow="Listen"
-            title="Подборка для прослушивания"
-            description="На главной оставлены только рабочие карточки с реальным звуком. Каждая кнопка play ниже запускает официальное preview-аудио."
+            title="Треки, с которых удобно начать"
+            description="Короткая подборка, чтобы быстро поймать разницу между Kai Angel и 9mice: мелодия, темп, напряжение и хук."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {featuredTracks.map((track, index) => (
@@ -124,8 +124,8 @@ export default function HomePage() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHeading
               eyebrow="Gallery"
-              title="Галерея с реальными файлами"
-              description="Внутри проекта уже лежат artist-изображения, видео-кадры и обложки релизов. На главной показан короткий фрагмент, а полная сетка с lightbox вынесена в отдельный маршрут."
+              title="Кадры, постеры, обложки"
+              description="Визуальный слой VIPERR строится не только на портретах, но и на обложках, общем кадре дуэта и плотной концертной энергии."
             />
             <Link
               href="/gallery"
@@ -190,22 +190,19 @@ export default function HomePage() {
                   <div className="flex items-start gap-3">
                     <ImageIcon size={18} className="mt-1 text-white/60" />
                     <p className="text-sm leading-7 text-white/64">
-                      Artist-изображения Kai Angel и 9mice, общая фотография VIPERR и
-                      видео-кадр Kai Angel.
+                      Выбранные портреты Kai Angel и 9mice, общий кадр VIPERR и жёсткий крупный план Kai.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <LibraryBig size={18} className="mt-1 text-white/60" />
                     <p className="text-sm leading-7 text-white/64">
-                      Отдельный слой с обложками релизов, чтобы галерея работала не только
-                      как moodboard, но и как визуальный архив.
+                      Обложки крупных релизов, по которым хорошо видно, как менялись масштаб, настроение и общий визуальный тон.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Headphones size={18} className="mt-1 text-white/60" />
                     <p className="text-sm leading-7 text-white/64">
-                      Внутренние переходы связывают галерею с релизами и аудио-превью, а не
-                      оставляют её отдельным декоративным блоком.
+                      Тот же визуальный язык продолжается в релизах и треках, поэтому атмосфера не ломается при переходе между разделами.
                     </p>
                   </div>
                 </div>
@@ -217,25 +214,25 @@ export default function HomePage() {
         <section className="space-y-10">
           <SectionHeading
             eyebrow="Explore"
-            title="Сайт как связанный продукт"
-            description="Отсюда можно уйти в разные сценарии: открыть артиста, посмотреть каталог релизов или перейти на страницу ссылок со всеми подтверждёнными площадками."
+            title="Дальше по разделам"
+            description="Если хочется углубиться, дальше можно пойти в сольную линию Kai Angel, в материал 9mice, в релизы или к основным ссылкам."
           />
           <div className="grid gap-4 lg:grid-cols-3">
             {[
               {
                 href: "/kai-angel",
-                title: "Страница Kai Angel",
-                text: "Сольные релизы, галерея и отдельный crimson-акцент.",
+                title: "Kai Angel",
+                text: "Сольные релизы, четыре сильных трека и более жёсткая драматичная подача.",
               },
               {
                 href: "/9mice",
-                title: "Страница 9mice",
-                text: "Холодный клубный ритм, отдельные превью и другой визуальный режим.",
+                title: "9mice",
+                text: "Клубный темп, холодная мелодика и подборка треков, которые цепляют сразу.",
               },
               {
                 href: "/links",
-                title: "Ссылки и площадки",
-                text: "Практическая страница со Spotify, BandLink, SoundCloud и YouTube.",
+                title: "Ссылки",
+                text: "Spotify, BandLink, SoundCloud, YouTube и все основные переходы в одном месте.",
               },
             ].map((item, index) => (
               <Reveal key={item.href} delay={index * 0.05}>
@@ -244,7 +241,7 @@ export default function HomePage() {
                   className="surface-card block p-6 transition-transform duration-300 hover:-translate-y-1"
                 >
                   <div className="text-xs uppercase tracking-[0.22em] text-white/38">
-                    Internal route
+                    Раздел
                   </div>
                   <div className="club-rule mt-3 w-20" />
                   <div className="mt-4 font-display text-3xl text-white">{item.title}</div>

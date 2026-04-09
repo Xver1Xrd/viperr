@@ -170,7 +170,7 @@ export function PageHero({
             <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-[#0c0b0b]">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_55%)]" />
               <div className="absolute left-3 top-3 z-10">
-                <span className="club-tag">Artist frame</span>
+                <span className="club-tag">Портрет</span>
               </div>
               <div className="relative aspect-[1/1.02] sm:aspect-[4/4.3]">
                 <Image

@@ -32,9 +32,7 @@ export function SiteFooter() {
             VIPERR
           </div>
           <p className="max-w-xl text-sm leading-7 text-white/62">
-            Многостраничный сайт о Kai Angel и 9mice с отдельными страницами артистов,
-            каталогом релизов, реальными 30-секундными превью и аккуратной
-            галереей.
+            Kai Angel и 9mice, их релизы, визуалы и короткие фрагменты в одном архиве.
           </p>
         </div>
 

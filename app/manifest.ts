@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "VIPERR",
     short_name: "VIPERR",
     description:
-      "Многостраничный сайт о Kai Angel и 9mice с релизами, галереей и рабочими аудио-превью.",
+      "VIPERR: Kai Angel и 9mice, релизы, визуалы и треки в одном архиве.",
     start_url: "/",
     display: "standalone",
     background_color: "#04060c",

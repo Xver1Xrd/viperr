@@ -107,20 +107,20 @@ export const mainNav: NavItem[] = [
 
 export const siteHighlights = [
   {
-    value: "6",
-    label: "полноценных страниц",
-  },
-  {
-    value: "8",
-    label: "треков в подборке",
+    value: "2",
+    label: "артиста в фокусе",
   },
   {
     value: "9",
-    label: "ключевых релизов в каталоге",
+    label: "релизов в архиве",
+  },
+  {
+    value: "8",
+    label: "треков с фрагментом",
   },
   {
     value: "13",
-    label: "изображений в галерее",
+    label: "визуалов в галерее",
   },
 ];
 
@@ -131,21 +131,21 @@ export const artists: Record<ArtistSlug, ArtistProfile> = {
     shortName: "Kai",
     accent: "crimson",
     eyebrow: "Solo Focus",
-    tagline: "Сольная линия Kai Angel: драматичный тон, собранный визуальный код и релизы, которые работают как законченные сцены.",
+    tagline: "Kai Angel держит линию на драматичной мелодии, холодной подаче и очень выверенном образе.",
     intro:
-      "Kai Angel держит баланс между мелодией, холодной подачей и очень выверенным образом. На этой странице собраны его сольные релизы, треки для прослушивания и визуальные материалы, которые помогают увидеть масштаб проекта целиком.",
+      "У Kai Angel музыка держится не только на хуках, но и на ощущении формы. Даже самые жёсткие треки у него собраны как цельный кадр: свет, напряжение, мелодия и контроль.",
     heroCopy:
-      "Страница Kai Angel построена вокруг сольной траектории артиста: от ранних релизов к более крупным и собранным работам. Здесь нет фанатской мишуры и выдуманных историй, только релизы, визуалы и быстрые переходы на официальные площадки.",
+      "Сольная траектория Kai Angel идёт от раннего напряжения к более крупным и собранным релизам. В его музыке почти всегда слышно одно и то же ядро: драматичная мелодия, резкий силуэт и точный контроль над настроением.",
     heroQuote:
-      "Сильная сторона Kai Angel не только в треках, но и в умении собирать вокруг музыки цельный образ.",
+      "У Kai Angel музыка и образ почти всегда работают как один кадр.",
     image: "/media/artists/kai-angel-user.jpg",
     imageAlt: "Kai Angel, выбранное пользовательское фото",
     heroImage: "/media/artists/kai-angel-user.jpg",
     heroImageAlt: "Kai Angel, выбранное пользовательское фото",
     stats: [
       { label: "Релизов в подборке", value: "5" },
-      { label: "Ключевые страницы", value: "релизы / галерея / ссылки" },
-      { label: "Рабочих превью", value: "4" },
+      { label: "Главный тон", value: "мелодия / напряжение / образ" },
+      { label: "Треков с фрагментом", value: "4" },
     ],
     features: [
       {
@@ -174,7 +174,7 @@ export const artists: Record<ArtistSlug, ArtistProfile> = {
       {
         label: "BandLink",
         href: "https://band.link/KAIANGEL9MICE",
-        description: "Общий smart-link проекта VIPERR.",
+        description: "Smart-link с основными площадками VIPERR.",
         category: "official",
       },
       {
@@ -191,19 +191,19 @@ export const artists: Record<ArtistSlug, ArtistProfile> = {
     shortName: "9mice",
     accent: "cyan",
     eyebrow: "Artist Page",
-    tagline: "9mice: холодная мелодика, клубная динамика и подача, в которой много скорости, но нет лишнего шума.",
+    tagline: "9mice соединяет холодную мелодику, клубный темп и хук, который срабатывает сразу.",
     intro:
-      "Страница 9mice отличается по настроению от Kai Angel: здесь больше клубного импульса, холодного света и прямого хука. Внутри собраны сольные релизы, треки для прослушивания и визуальные материалы без перегруза и декоративной пустоты.",
+      "У 9mice сильнее ощущается клубное давление: темп, холодный свет и прямой хук. Даже когда трек уходит в мелодию, в нём всё равно остаётся движение и жёсткость.",
     heroCopy:
-      "На этой странице акцент сделан на сольной линии 9mice и на том, как его подача соединяет клубную скорость, холодную мелодию и очень уверенный поп-хук. Материал собран так, чтобы было удобно и слушать, и переходить на официальные платформы.",
+      "Сольная линия 9mice держится на скорости, холодной мелодике и очень уверенном припеве. В его лучших вещах поп-хук не смягчает удар, а только делает его заметнее.",
     heroQuote:
-      "9mice лучше всего работает там, где энергия остаётся жёсткой, а мелодия всё равно цепляет с первого включения.",
+      "Лучший режим 9mice — когда мелодия цепляет сразу, а энергия остаётся жёсткой.",
     image: "/media/artists/9mice-user.jpg",
     imageAlt: "9mice, выбранное пользовательское фото",
     stats: [
       { label: "Релизов в подборке", value: "6" },
-      { label: "Рабочих превью", value: "4" },
-      { label: "Основной акцент", value: "club / hook / image" },
+      { label: "Треков с фрагментом", value: "4" },
+      { label: "Основной тон", value: "club / hook / cold" },
     ],
     features: [
       {
@@ -216,7 +216,7 @@ export const artists: Record<ArtistSlug, ArtistProfile> = {
       },
       {
         title: "Своя подача",
-        text: "Страница сделана не копией Kai Angel: здесь больше воздуха, голубых акцентов и клубной графики, чтобы ощущение артиста было отдельным.",
+        text: "Даже в более мягких вещах 9mice держит свой холодный силуэт, поэтому его материал считывается отдельно и не теряется рядом с Kai Angel.",
       },
     ],
     releaseIds: ["9mm", "heavy-metal-2", "your-love", "orpheus", "soloist", "heavy-metal"],
@@ -232,7 +232,7 @@ export const artists: Record<ArtistSlug, ArtistProfile> = {
       {
         label: "BandLink",
         href: "https://band.link/KAIANGEL9MICE",
-        description: "Общий smart-link проекта VIPERR.",
+        description: "Smart-link с основными площадками VIPERR.",
         category: "official",
       },
       {
@@ -259,7 +259,7 @@ export const releases: ReleaseItem[] = [
     runtime: "полный релиз",
     summary: "Сольный альбом 9mice с более плотной и собранной подачей.",
     detail:
-      "В каталоге проекта этот релиз показывает более поздний этап: меньше хаоса, больше уверенного контроля над темпом, хуками и образом.",
+      "Этот релиз показывает более поздний этап: меньше хаоса, больше уверенного контроля над темпом, хуками и образом.",
     spotifyUrl: "https://open.spotify.com/album/2ZjaGkJU86y2WOd3t9rc9u",
     cover: "/media/covers/9mm.jpg",
     coverAlt: "Обложка альбома 9mm",
@@ -276,9 +276,9 @@ export const releases: ReleaseItem[] = [
     year: "2025",
     trackCount: "17 треков",
     runtime: "полный релиз",
-    summary: "Один из самых больших сольных релизов Kai Angel в этом проекте.",
+    summary: "Один из самых больших сольных релизов Kai Angel.",
     detail:
-      "На странице Kai Angel этот альбом используется как точка для разговора о более зрелом и крупном масштабе подачи.",
+      "Здесь особенно хорошо слышно, как Kai Angel держит уже более крупный и собранный масштаб подачи.",
     spotifyUrl: "https://open.spotify.com/album/2wDFDUxHnXAhCY682osJh6",
     cover: "/media/covers/damage.jpg",
     coverAlt: "Обложка альбома damage",
@@ -297,7 +297,7 @@ export const releases: ReleaseItem[] = [
     runtime: "полный релиз",
     summary: "Большой совместный релиз, где общий звук и образ уже собраны максимально уверенно.",
     detail:
-      "Это одна из главных точек входа в общий проект: масштабный релиз, который работает и как музыкальная работа, и как центр визуальной айдентики VIPERR.",
+      "Одна из главных точек входа в общий материал Kai Angel и 9mice: масштабный релиз, где звук и визуал уже работают как единое целое.",
     spotifyUrl: "https://open.spotify.com/album/2apmGMKFppnLu7eccTQwM2",
     cover: "/media/covers/heavy-metal-2.jpg",
     coverAlt: "Обложка альбома Heavy Metal 2",
@@ -334,7 +334,7 @@ export const releases: ReleaseItem[] = [
     runtime: "полный релиз",
     summary: "Крупный сольный релиз Kai Angel с уже очень собранным визуальным кодом.",
     detail:
-      "Для этой страницы альбом важен как точка, где сольный почерк Kai Angel становится максимально цельным и масштабным.",
+      "Здесь сольный почерк Kai Angel звучит особенно цельно: масштабно, холодно и очень уверенно.",
     spotifyUrl: "https://open.spotify.com/album/4mOYvmMHqKHT81fcWBOFuF",
     cover: "/media/covers/god-system.jpg",
     coverAlt: "Обложка альбома GOD SYSTEM",
@@ -351,7 +351,7 @@ export const releases: ReleaseItem[] = [
     year: "2023",
     trackCount: "15 треков",
     runtime: "полный релиз",
-    summary: "Один из ключевых сольных альбомов 9mice в каталоге проекта.",
+    summary: "Один из ключевых сольных альбомов 9mice.",
     detail:
       "На фоне более поздних релизов ORPHEUS хорошо показывает, как формировался собственный голос артиста.",
     spotifyUrl: "https://open.spotify.com/album/3c7myEnQJ6P2HrquNNL4gn",
@@ -389,9 +389,9 @@ export const releases: ReleaseItem[] = [
     year: "2023",
     trackCount: "6 треков",
     runtime: "13 минут",
-    summary: "Релиз, с которого удобно заходить в ранний общий период проекта.",
+    summary: "Релиз, с которого удобно заходить в ранний общий период.",
     detail:
-      "На Apple Music эта EP отмечена как релиз от 17 февраля 2023 года. Для сайта она важна как отправная точка общего звучания и общего визуального языка.",
+      "Ранний общий релиз, в котором уже слышно, как у Kai Angel и 9mice складывается общий звук и визуальный тон.",
     cover: "/media/covers/heavy-metal.jpg",
     coverAlt: "Обложка релиза HEAVY METAL",
     appleUrl: "https://music.apple.com/us/album/heavy-metal-ep/1671139616",
@@ -409,7 +409,7 @@ export const releases: ReleaseItem[] = [
     runtime: "ранний релиз",
     summary: "Более ранний альбом 9mice, который даёт контекст сольной траектории.",
     detail:
-      "На releases-странице SOLOIST помогает показать, что у 9mice есть не только свежие релизы, но и база, на которой строился более поздний материал.",
+      "SOLOIST даёт ранний контекст для сольной линии 9mice и помогает увидеть, на чём вырос более поздний материал.",
     cover: "/media/covers/soloist.jpg",
     coverAlt: "Обложка альбома SOLOIST",
     appleUrl: "https://music.apple.com/us/album/soloist/1694212695",
@@ -422,7 +422,7 @@ export const previewTracks: PreviewTrack[] = [
     title: "body double",
     artistLabel: "Kai Angel",
     artistKey: "kai-angel",
-    note: "Официальное превью Apple Music из релиза damage. Хорошо передаёт поздний, уже очень собранный масштаб Kai Angel.",
+    note: "Фрагмент из damage. Хорошо передаёт поздний, уже очень собранный масштаб Kai Angel.",
     previewLabel: "Apple Music preview · 00:30",
     previewUrl:
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ac/2d/0b/ac2d0bdc-2b09-f7cd-9696-30b8fb5d37ae/mzaf_7960285255258480722.plus.aac.p.m4a",
@@ -436,7 +436,7 @@ export const previewTracks: PreviewTrack[] = [
     title: "JUMP!",
     artistLabel: "Kai Angel",
     artistKey: "kai-angel",
-    note: "Рабочее 30-секундное превью из ANGEL MAY CRY. Быстрый и понятный вход в более ранний сольный материал Kai Angel.",
+    note: "Фрагмент из ANGEL MAY CRY, в котором хорошо слышны раннее напряжение и мелодическая линия Kai Angel.",
     previewLabel: "Apple Music preview · 00:30",
     previewUrl:
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f1/57/29/f157296a-153d-0031-4f89-944a942369ad/mzaf_12106263820482462520.plus.aac.p.m4a",
@@ -450,7 +450,7 @@ export const previewTracks: PreviewTrack[] = [
     title: "GOD SYSTEM",
     artistLabel: "Kai Angel",
     artistKey: "kai-angel",
-    note: "Рабочее превью из крупного сольного альбома Kai Angel. Подходит для страницы лучше, чем немые внешние карточки.",
+    note: "Превью из крупного сольного альбома Kai Angel с более тяжёлой и масштабной подачей.",
     previewLabel: "Apple Music preview · 00:30",
     previewUrl:
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/66/90/d1/6690d146-7dce-ea5d-2931-f5c28c4dd37b/mzaf_8471135285195264430.plus.aac.p.m4a",
@@ -464,7 +464,7 @@ export const previewTracks: PreviewTrack[] = [
     title: "welcome to forever",
     artistLabel: "Kai Angel",
     artistKey: "kai-angel",
-    note: "Ещё одно рабочее превью Kai Angel, уже из более позднего периода. На странице теперь только реальные прослушиваемые карточки.",
+    note: "Ещё один фрагмент из позднего периода Kai Angel: более крупный, спокойный и уверенный по тону.",
     previewLabel: "Apple Music preview · 00:30",
     previewUrl:
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/93/75/77/93757752-409e-1e9e-02da-af6f69515c54/mzaf_4440295897619256944.plus.aac.p.m4a",
@@ -478,7 +478,7 @@ export const previewTracks: PreviewTrack[] = [
     title: "what's uppppppxddDDD",
     artistLabel: "Kai Angel",
     artistKey: "kai-angel",
-    note: "Для этого трека я оставил прямой переход на SoundCloud: встроенного фрагмента на сайте нет, поэтому карточка работает честно как внешняя ссылка.",
+    note: "Для этого трека доступен прямой переход на SoundCloud.",
     previewLabel: "SoundCloud link · без встроенного аудио",
     listenUrl: "https://soundcloud.com/4ngelkai/whats-uppppppxddddd",
     platformLabel: "SoundCloud",
@@ -490,7 +490,7 @@ export const previewTracks: PreviewTrack[] = [
     title: "My Sweet Lullaby",
     artistLabel: "zavet / Kai Angel archive",
     artistKey: "kai-angel",
-    note: "Ранний архивный трек эпохи zavet. На сайте для него оставлен прямой переход на SoundCloud без попытки имитировать встроенный плеер.",
+    note: "Ранний архивный трек эпохи zavet с прямым переходом на SoundCloud.",
     previewLabel: "Archive link · без встроенного аудио",
     listenUrl: "https://soundcloud.com/zavetvip_itskov/my-sweet-lullaby",
     platformLabel: "SoundCloud",
@@ -502,7 +502,7 @@ export const previewTracks: PreviewTrack[] = [
     title: "ANGRYY",
     artistLabel: "Kai Angel",
     artistKey: "kai-angel",
-    note: "Прямой переход на публичный SoundCloud-трек Kai Angel & 9mice. Карточка не обещает встроенный звук, если подтверждённого превью нет.",
+    note: "Публичный SoundCloud-трек Kai Angel и 9mice с прямым переходом на платформу.",
     previewLabel: "SoundCloud link · без встроенного аудио",
     listenUrl: "https://soundcloud.com/9mice9/kai-angel-angryy",
     platformLabel: "SoundCloud",
@@ -514,7 +514,7 @@ export const previewTracks: PreviewTrack[] = [
     title: "MMW / Москва - Владивосток",
     artistLabel: "9mice",
     artistKey: "9mice",
-    note: "Официальное превью Apple Music для более позднего сольного периода 9mice. Хорошо работает как быстрый вход в текущую линию артиста.",
+    note: "Фрагмент из более позднего сольного периода 9mice: быстрый вход в его текущую линию.",
     previewLabel: "Apple Music preview · 00:30",
     previewUrl:
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5b/f5/0f/5bf50f44-21c8-af6d-75f6-c1baea32b99b/mzaf_8210116308552012983.plus.aac.p.m4a",
@@ -528,7 +528,7 @@ export const previewTracks: PreviewTrack[] = [
     title: "your love",
     artistLabel: "9mice",
     artistKey: "9mice",
-    note: "Рабочее превью сольного трека 9mice с более мягкой мелодикой. Заменяет карточку без звука, чтобы весь блок реально воспроизводился.",
+    note: "Превью сольного трека 9mice с более мягкой мелодикой и цепким припевом.",
     previewLabel: "Apple Music preview · 00:30",
     previewUrl:
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e1/06/10/e106101f-2b5e-048e-c469-b7e2c03b6b82/mzaf_2497123240899110376.plus.aac.p.m4a",
@@ -542,7 +542,7 @@ export const previewTracks: PreviewTrack[] = [
     title: "AVRIL LAVIGNE",
     artistLabel: "9mice",
     artistKey: "9mice",
-    note: "Для этого трека подтверждён прямой внешний переход, поэтому карточка ведёт сразу на платформу и не рисует несуществующий play на странице.",
+    note: "Для этого трека доступен прямой переход на Spotify.",
     previewLabel: "Spotify link · без встроенного аудио",
     listenUrl: "https://open.spotify.com/track/6wYaBjCIB4xrtiT83GVc1w",
     platformLabel: "Spotify",
@@ -554,7 +554,7 @@ export const previewTracks: PreviewTrack[] = [
     title: "ГОША РУБЧИНСКИЙ",
     artistLabel: "9mice",
     artistKey: "9mice",
-    note: "Официальное превью Apple Music из сольной линии 9mice с более резкой подачей и прямым клубным нервом.",
+    note: "Фрагмент из сольной линии 9mice с более резкой подачей и прямым клубным нервом.",
     previewLabel: "Apple Music preview · 00:30",
     previewUrl:
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/61/d6/11/61d61161-8277-9acb-5f38-731d0f86a857/mzaf_15218783780857868765.plus.aac.p.m4a",
@@ -568,7 +568,7 @@ export const previewTracks: PreviewTrack[] = [
     title: "kill bill / evian",
     artistLabel: "9mice",
     artistKey: "9mice",
-    note: "Официальный Apple Music-фрагмент из позднего периода 9mice. Хорошо показывает более плотную и уже совсем собранную подачу.",
+    note: "Официальный фрагмент из позднего периода 9mice с более плотной и уже совсем собранной подачей.",
     previewLabel: "Apple Music preview · 00:30",
     previewUrl:
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0c/29/0a/0c290a52-a0c0-a4e3-626f-2c568b051321/mzaf_12452515014329367968.plus.aac.p.m4a",
@@ -583,9 +583,9 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "duo-portrait",
     title: "VIPERR duo portrait",
-    caption: "Общая фотография проекта, использована как главный визуальный акцент на главной странице.",
+    caption: "Общий кадр Kai Angel и 9mice.",
     src: "/media/artists/duo-bandlink.jpeg",
-    alt: "Kai Angel и 9mice, общее изображение проекта VIPERR",
+    alt: "Kai Angel и 9mice",
     category: "artists",
     tone: "Главная сцена",
     size: "wide",
@@ -593,7 +593,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "kai-artist",
     title: "Kai Angel",
-    caption: "Выбранное фото Kai Angel для всех основных блоков сайта.",
+    caption: "Основной портрет Kai Angel.",
     src: "/media/artists/kai-angel-user.jpg",
     alt: "Kai Angel",
     category: "artists",
@@ -603,7 +603,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "9mice-artist",
     title: "9mice",
-    caption: "Выбранное фото 9mice для artist-блоков и галереи.",
+    caption: "Основной портрет 9mice.",
     src: "/media/artists/9mice-user.jpg",
     alt: "9mice",
     category: "artists",
@@ -613,7 +613,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "kai-still",
     title: "Kai Angel portrait",
-    caption: "То же фото Kai Angel использовано и в gallery-слое, чтобы образ был везде единым.",
+    caption: "Крупный портрет Kai Angel.",
     src: "/media/artists/kai-angel-user.jpg",
     alt: "Портрет Kai Angel",
     category: "stills",
@@ -623,7 +623,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "heavy-metal-cover",
     title: "HEAVY METAL",
-    caption: "Ранняя общая точка входа в проект.",
+    caption: "Ранняя общая точка входа.",
     src: "/media/covers/heavy-metal.jpg",
     alt: "Обложка HEAVY METAL",
     category: "covers",
@@ -663,7 +663,7 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "heavy-metal-2-cover",
     title: "Heavy Metal 2",
-    caption: "Большой совместный релиз проекта.",
+    caption: "Большой совместный релиз.",
     src: "/media/covers/heavy-metal-2.jpg",
     alt: "Обложка Heavy Metal 2",
     category: "covers",
@@ -719,7 +719,7 @@ export const homeGalleryIds = ["duo-portrait", "kai-artist", "9mice-artist", "ka
 export const linkGroups: LinkGroup[] = [
   {
     title: "Слушать",
-    description: "Подтверждённые музыкальные площадки, на которые этот сайт ведёт напрямую.",
+    description: "Главные музыкальные площадки Kai Angel, 9mice и VIPERR.",
     items: [
       {
         label: "Kai Angel · Spotify",
@@ -736,14 +736,14 @@ export const linkGroups: LinkGroup[] = [
       {
         label: "VIPERR · SoundCloud",
         href: "https://soundcloud.com/viperrviperr",
-        description: "Переход на SoundCloud-страницу VIPERR.",
+        description: "SoundCloud VIPERR.",
         category: "listen",
       },
     ],
   },
   {
     title: "Смотреть",
-    description: "Переходы на публичные страницы, где можно продолжить знакомство с визуальным материалом.",
+    description: "Видео и визуальный архив.",
     items: [
       {
         label: "VIPERR · YouTube",
@@ -752,39 +752,39 @@ export const linkGroups: LinkGroup[] = [
         category: "watch",
       },
       {
-        label: "Галерея на сайте",
+        label: "Галерея VIPERR",
         href: "/gallery",
-        description: "Внутренняя галерея проекта с фото, кадрами и обложками.",
+        description: "Галерея с фото, кадрами и обложками.",
         category: "official",
       },
     ],
   },
   {
     title: "Официальные переходы",
-    description: "Здесь только публичные ссылки. Приватные контакты и неподтверждённые соцсети сайт не публикует.",
+    description: "Основные точки входа в архив и smart-link VIPERR.",
     items: [
       {
         label: "BandLink · Kai Angel & 9mice",
         href: "https://band.link/KAIANGEL9MICE",
-        description: "Общий smart-link проекта VIPERR.",
+        description: "Smart-link Kai Angel и 9mice.",
         category: "official",
       },
       {
-        label: "Релизы на сайте",
+        label: "Архив релизов",
         href: "/releases",
-        description: "Внутренняя страница-каталог с датами и описаниями релизов.",
+        description: "Каталог с датами, обложками и описаниями релизов.",
         category: "official",
       },
       {
-        label: "Страница Kai Angel",
+        label: "Kai Angel",
         href: "/kai-angel",
-        description: "Отдельная страница Kai Angel с релизами и превью.",
+        description: "Kai Angel: релизы, треки и визуалы.",
         category: "official",
       },
       {
-        label: "Страница 9mice",
+        label: "9mice",
         href: "/9mice",
-        description: "Отдельная страница 9mice с релизами и превью.",
+        description: "9mice: релизы, треки и визуалы.",
         category: "official",
       },
     ],

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | VIPERR",
   },
   description:
-    "Многостраничный production-ready сайт о Kai Angel и 9mice: отдельные страницы артистов, каталог релизов, реальная галерея, рабочие превью и честные переходы на внешние платформы.",
+    "VIPERR посвящён Kai Angel и 9mice: сольным релизам, общим работам, визуальному архиву и выбранным трекам для быстрого входа.",
   applicationName: "VIPERR",
   manifest: "/manifest.webmanifest",
   keywords: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "VIPERR | Kai Angel + 9mice",
     description:
-      "Полноценный многостраничный сайт о Kai Angel и 9mice с релизами, галереей, рабочими превью и внешними платформами.",
+      "Kai Angel и 9mice: релизы, визуалы и треки, с которых удобно начинать знакомство.",
     type: "website",
     locale: "ru_RU",
     siteName: "VIPERR",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "VIPERR | Kai Angel + 9mice",
     description:
-      "Многостраничный сайт о Kai Angel и 9mice: релизы, галерея, рабочие превью и ссылки на площадки.",
+      "Kai Angel и 9mice: релизы, визуалы и треки для быстрого входа.",
     images: [`${siteUrl}/opengraph-image`],
   },
 };

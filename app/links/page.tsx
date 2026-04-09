@@ -11,7 +11,7 @@ import { artists, linkGroups } from "@/lib/site-data";
 export const metadata = createPageMetadata({
   title: "Ссылки",
   description:
-    "Страница ссылок VIPERR: Spotify, BandLink, SoundCloud, YouTube и полезные внутренние маршруты сайта.",
+    "Основные ссылки VIPERR: Spotify, BandLink, SoundCloud, YouTube и быстрые переходы по разделам.",
   pathname: "/links",
 });
 
@@ -22,7 +22,7 @@ export default function LinksPage() {
         <PageHero
           eyebrow="Platforms"
           title="Ссылки и площадки"
-          description="Эта страница собрана как практический хаб. Здесь нет фейковых контактных форм и случайных иконок: только подтверждённые публичные ссылки и внутренние маршруты, которые реально помогают продолжить знакомство с проектом."
+          description="Здесь собраны основные точки выхода: где слушать артистов, куда идти за общими ссылками и где смотреть визуалы."
           image="/media/covers/heavy-metal-2.jpg"
           imageAlt="Обложка Heavy Metal 2"
           accent="violet"
@@ -36,8 +36,8 @@ export default function LinksPage() {
           ]}
           metrics={[
             { label: "Групп ссылок", value: String(linkGroups.length) },
-            { label: "Есть внутри", value: "Spotify / BandLink / SoundCloud / YouTube" },
-            { label: "Фокус страницы", value: "полезность" },
+            { label: "Главные платформы", value: "Spotify / BandLink / SoundCloud / YouTube" },
+            { label: "Основные линии", value: "Kai Angel / 9mice / VIPERR" },
           ]}
         />
       </PageContainer>
@@ -47,7 +47,7 @@ export default function LinksPage() {
           <SectionHeading
             eyebrow="Link Groups"
             title="Подтверждённые переходы"
-            description="Ссылки разбиты по смыслу: где слушать, где смотреть и какие внутренние маршруты сайта полезно открыть следом."
+            description="Ссылки разбиты по смыслу: где слушать артистов, где смотреть видео и где открывать ключевые разделы."
           />
           <div className="grid gap-6 lg:grid-cols-3">
             {linkGroups.map((group, index) => (
@@ -106,7 +106,7 @@ export default function LinksPage() {
           <SectionHeading
             eyebrow="Artist Shortcuts"
             title="Быстрый переход к артистам"
-            description="Страница links не оторвана от сайта: отсюда можно сразу уйти на нужную artist-page, а не искать её через меню."
+            description="Если нужен конкретный артист, отсюда можно сразу открыть Kai Angel или 9mice без лишних переходов."
           />
           <div className="grid gap-6 xl:grid-cols-2">
             {Object.values(artists).map((artist, index) => (
@@ -132,7 +132,7 @@ export default function LinksPage() {
                       <div className="mt-3 font-display text-4xl text-white">{artist.name}</div>
                       <p className="mt-4 text-sm leading-7 text-white/64">{artist.tagline}</p>
                       <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#ffb998]">
-                        Открыть страницу
+                        Открыть
                         <ArrowRight size={16} />
                       </div>
                     </div>
@@ -146,21 +146,21 @@ export default function LinksPage() {
         <section className="grid gap-4 md:grid-cols-3">
           {[
             {
-              title: "Без фейковых контактов",
-              text: "Если прямых публичных контактов нет, страница этого не выдумывает. Здесь только реальные открытые ссылки.",
+              title: "Музыка",
+              text: "Spotify, SoundCloud и BandLink собраны рядом, чтобы быстро уходить из архива прямо в прослушивание.",
             },
             {
-              title: "Удобный маршрут",
-              text: "Со links-страницы можно сразу уйти на артистов, релизы и галерею, не теряя контекст и не делая лишних кликов.",
+              title: "Видео и визуал",
+              text: "YouTube и галерея стоят рядом, поэтому музыка и визуальный слой не разъезжаются по разным углам.",
             },
             {
-              title: "Честный audio-flow",
-              text: "Если нужен звук, дальше маршрут ведёт на страницы с реальными превью и на официальные музыкальные площадки.",
+              title: "Быстрые переходы",
+              text: "Отсюда удобно уйти в релизы, к Kai Angel или к 9mice, если хочется сразу открыть нужный раздел.",
             },
           ].map((item, index) => (
             <Reveal key={item.title} delay={index * 0.05}>
               <div className="surface-card h-full p-6">
-                <div className="club-tag">Why it works</div>
+                <div className="club-tag">Навигация</div>
                 <div className="mt-3 font-display text-3xl text-white">{item.title}</div>
                 <p className="mt-3 text-sm leading-7 text-white/64">{item.text}</p>
               </div>

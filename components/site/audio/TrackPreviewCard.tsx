@@ -53,7 +53,7 @@ export function TrackPreviewCard({ track }: TrackPreviewCardProps) {
         </>
       ) : (
         <div className="club-inset mt-5 px-4 py-3 text-xs uppercase tracking-[0.18em] text-white/42">
-          Без встроенного аудио на сайте
+          Слушать на платформе
         </div>
       )}
 
@@ -68,7 +68,7 @@ export function TrackPreviewCard({ track }: TrackPreviewCardProps) {
               )}
             >
               {active && isPlaying ? <Pause size={16} /> : <Play size={16} />}
-              {active && isPlaying ? "Пауза" : active ? "Продолжить" : "Слушать превью"}
+              {active && isPlaying ? "Пауза" : active ? "Продолжить" : "Слушать фрагмент"}
             </button>
             <a
               href={track.listenUrl}
