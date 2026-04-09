@@ -40,8 +40,8 @@ export default function HomePage() {
           title="Kai Angel + 9mice"
           description="Kai Angel и 9mice идут рядом, но звучат по-разному: у одного больше драматичной собранности, у второго больше клубного давления, скорости и прямого хука."
           quote="Их сила в контрасте: у Kai Angel больше драматичной собранности, у 9mice — клубного давления и прямого хука."
-          image="/media/artists/duo-bandlink.jpeg"
-          imageAlt="Kai Angel и 9mice"
+          image="/media/artists/home-hero-user.jpg"
+          imageAlt="Фото для главной страницы VIPERR"
           accent="violet"
           actions={[
             { label: "Открыть релизы", href: "/releases" },
