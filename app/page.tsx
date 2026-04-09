@@ -1,63 +1,263 @@
-import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
-import { AboutSection } from "@/components/sections/AboutSection";
-import { DiscographySection } from "@/components/sections/DiscographySection";
-import { GallerySection } from "@/components/sections/GallerySection";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { ManifestSection } from "@/components/sections/ManifestSection";
-import { SocialSection } from "@/components/sections/SocialSection";
-import { TimelineSection } from "@/components/sections/TimelineSection";
-import { TracksSection } from "@/components/sections/TracksSection";
-import { GradientOrb } from "@/components/ui/GradientOrb";
-import { NoiseOverlay } from "@/components/ui/NoiseOverlay";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Headphones, ImageIcon, LibraryBig } from "lucide-react";
+import { ArtistSpotlightCard } from "@/components/site/cards/ArtistSpotlightCard";
+import { ReleaseCard } from "@/components/site/cards/ReleaseCard";
+import { PageHero } from "@/components/site/PageHero";
+import { SectionHeading } from "@/components/site/SectionHeading";
+import { TrackPreviewCard } from "@/components/site/audio/TrackPreviewCard";
+import { PageContainer } from "@/components/site/layout/PageContainer";
+import { Reveal } from "@/components/ui/Reveal";
+import { createPageMetadata } from "@/lib/metadata";
 import {
   artists,
-  galleryItems,
-  manifestPhrases,
-  navigation,
-  releases,
-  socialLinks,
-  timelineItems,
-  tracks,
-} from "@/lib/data";
+  getGalleryItemsByIds,
+  getPreviewTracksByIds,
+  getReleasesByIds,
+  homeFeaturedReleaseIds,
+  homeGalleryIds,
+  homePreviewTrackIds,
+  siteHighlights,
+} from "@/lib/site-data";
 
-export default function Home() {
+export const metadata = createPageMetadata({
+  title: "Главная",
+  description:
+    "Главная страница VIPERR: Kai Angel и 9mice, отдельные страницы артистов, каталог релизов, галерея и рабочие официальные аудио-превью.",
+  pathname: "/",
+});
+
+const featuredReleases = getReleasesByIds(homeFeaturedReleaseIds);
+const featuredTracks = getPreviewTracksByIds(homePreviewTrackIds);
+const galleryPreview = getGalleryItemsByIds(homeGalleryIds);
+
+export default function HomePage() {
   return (
-    <div className="relative isolate overflow-x-clip">
-      <NoiseOverlay />
-
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <GradientOrb
-          className="left-[-8rem] top-20 h-72 w-72 sm:h-96 sm:w-96"
-          from="rgba(145, 124, 255, 0.28)"
-          to="rgba(145, 124, 255, 0)"
+    <>
+      <PageContainer>
+        <PageHero
+          eyebrow="Multi-page music project"
+          title="Kai Angel + 9mice"
+          description="VIPERR собирает в одном месте ключевые релизы, отдельные страницы артистов, реальные 30-секундные превью Apple Music, галерею и быстрые переходы на официальные площадки. Это не одностраничный концепт, а готовый музыкальный сайт с понятной структурой."
+          quote="На сайте нет фейкового плеера: если рядом с треком есть кнопка прослушивания, она запускает реальное официальное превью."
+          image="/media/artists/duo-bandlink.jpeg"
+          imageAlt="Kai Angel и 9mice"
+          accent="violet"
+          actions={[
+            { label: "Открыть релизы", href: "/releases" },
+            { label: "Смотреть галерею", href: "/gallery", variant: "secondary" },
+          ]}
+          metrics={siteHighlights.slice(0, 3)}
         />
-        <GradientOrb
-          className="right-[-10rem] top-[18rem] h-80 w-80 sm:h-[28rem] sm:w-[28rem]"
-          from="rgba(91, 162, 255, 0.22)"
-          to="rgba(91, 162, 255, 0)"
-        />
-        <GradientOrb
-          className="bottom-[-14rem] left-1/2 h-[28rem] w-[28rem] -translate-x-1/2"
-          from="rgba(255, 92, 114, 0.14)"
-          to="rgba(255, 92, 114, 0)"
-        />
-      </div>
+      </PageContainer>
 
-      <Header navigation={navigation} />
+      <PageContainer className="section-space space-y-24">
+        <section>
+          <Reveal>
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              {siteHighlights.map((item) => (
+                <div key={item.label} className="surface-card p-5 sm:p-6">
+                  <div className="font-display text-4xl text-white">{item.value}</div>
+                  <p className="mt-2 text-sm leading-7 text-white/62">{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </section>
 
-      <main className="relative z-10">
-        <HeroSection />
-        <AboutSection artists={artists} />
-        <DiscographySection releases={releases} />
-        <TracksSection tracks={tracks} />
-        <GallerySection items={galleryItems} />
-        <TimelineSection items={timelineItems} />
-        <ManifestSection phrases={manifestPhrases} />
-        <SocialSection links={socialLinks} />
-      </main>
+        <section className="space-y-10">
+          <SectionHeading
+            eyebrow="Artists"
+            title="Две отдельные страницы, два разных акцента"
+            description="Kai Angel и 9mice разведены по отдельным маршрутам не формально, а по подаче. У каждой страницы свой ритм, свой цветовой акцент и своя логика контента."
+          />
+          <div className="grid gap-6 xl:grid-cols-2">
+            <Reveal>
+              <ArtistSpotlightCard artist={artists["kai-angel"]} />
+            </Reveal>
+            <Reveal delay={0.08}>
+              <ArtistSpotlightCard artist={artists["9mice"]} />
+            </Reveal>
+          </div>
+        </section>
 
-      <Footer navigation={navigation} socialLinks={socialLinks} />
-    </div>
+        <section className="space-y-10">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <SectionHeading
+              eyebrow="Releases"
+              title="Выбранные релизы"
+              description="На главной показаны три больших точки входа. Полный каталог с датами и быстрым фильтром собран на отдельной странице releases."
+            />
+            <Link
+              href="/releases"
+              className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/12 bg-white/6 px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
+            >
+              Весь каталог
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {featuredReleases.map((release, index) => (
+              <Reveal key={release.id} delay={index * 0.06}>
+                <ReleaseCard release={release} />
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        <section className="space-y-10">
+          <SectionHeading
+            eyebrow="Official Audio Previews"
+            title="Рабочие аудио-превью"
+            description="Все кнопки ниже запускают официальные 30-секундные превью из Apple Music. Это честный аудио-блок без имитации звука и без бутафорского интерфейса."
+          />
+          <div className="grid gap-6 md:grid-cols-2">
+            {featuredTracks.map((track, index) => (
+              <Reveal key={track.id} delay={index * 0.05}>
+                <TrackPreviewCard track={track} />
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        <section className="space-y-10">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <SectionHeading
+              eyebrow="Gallery"
+              title="Галерея с реальными файлами"
+              description="Внутри проекта уже лежат artist-изображения, видео-кадры и обложки релизов. На главной показан короткий фрагмент, а полная сетка с lightbox вынесена в отдельный маршрут."
+            />
+            <Link
+              href="/gallery"
+              className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/12 bg-white/6 px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
+            >
+              Полная галерея
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+            <Reveal className="grid gap-4 sm:grid-cols-2">
+              {galleryPreview.slice(0, 2).map((item) => (
+                <div key={item.id} className="surface-card overflow-hidden">
+                  <div className="relative aspect-[4/4.4]">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/82 via-black/20 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 p-5">
+                      <div className="text-xs uppercase tracking-[0.22em] text-white/38">
+                        {item.tone}
+                      </div>
+                      <div className="mt-2 font-display text-2xl text-white">{item.title}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </Reveal>
+
+            <div className="grid gap-4">
+              <Reveal className="surface-card overflow-hidden">
+                <div className="relative aspect-[16/10]">
+                  <Image
+                    src={galleryPreview[2]?.src ?? "/media/artists/9mice.png"}
+                    alt={galleryPreview[2]?.alt ?? "9mice"}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/82 via-black/20 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-5">
+                    <div className="text-xs uppercase tracking-[0.22em] text-white/38">
+                      {galleryPreview[2]?.tone}
+                    </div>
+                    <div className="mt-2 font-display text-2xl text-white">
+                      {galleryPreview[2]?.title}
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.06} className="surface-card p-6 sm:p-7">
+                <div className="text-xs uppercase tracking-[0.24em] text-white/38">
+                  Что внутри
+                </div>
+                <div className="mt-4 space-y-4">
+                  <div className="flex items-start gap-3">
+                    <ImageIcon size={18} className="mt-1 text-white/60" />
+                    <p className="text-sm leading-7 text-white/64">
+                      Artist-изображения Kai Angel и 9mice, общая фотография VIPERR и
+                      видео-кадр Kai Angel.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <LibraryBig size={18} className="mt-1 text-white/60" />
+                    <p className="text-sm leading-7 text-white/64">
+                      Отдельный слой с обложками релизов, чтобы галерея работала не только
+                      как moodboard, но и как визуальный архив.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Headphones size={18} className="mt-1 text-white/60" />
+                    <p className="text-sm leading-7 text-white/64">
+                      Внутренние переходы связывают галерею с релизами и аудио-превью, а не
+                      оставляют её отдельным декоративным блоком.
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        <section className="space-y-10">
+          <SectionHeading
+            eyebrow="Explore"
+            title="Сайт как связанный продукт"
+            description="Отсюда можно уйти в разные сценарии: открыть артиста, посмотреть каталог релизов или перейти на страницу ссылок со всеми подтверждёнными площадками."
+          />
+          <div className="grid gap-4 lg:grid-cols-3">
+            {[
+              {
+                href: "/kai-angel",
+                title: "Страница Kai Angel",
+                text: "Сольные релизы, галерея и отдельный crimson-акцент.",
+              },
+              {
+                href: "/9mice",
+                title: "Страница 9mice",
+                text: "Холодный клубный ритм, отдельные превью и другой визуальный режим.",
+              },
+              {
+                href: "/links",
+                title: "Ссылки и площадки",
+                text: "Практическая страница с BandLink, Apple Music, SoundCloud и YouTube.",
+              },
+            ].map((item, index) => (
+              <Reveal key={item.href} delay={index * 0.05}>
+                <Link
+                  href={item.href}
+                  className="surface-card block p-6 transition-transform duration-300 hover:-translate-y-1"
+                >
+                  <div className="text-xs uppercase tracking-[0.22em] text-white/38">
+                    Internal route
+                  </div>
+                  <div className="mt-3 font-display text-3xl text-white">{item.title}</div>
+                  <p className="mt-3 text-sm leading-7 text-white/64">{item.text}</p>
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white">
+                    Перейти
+                    <ArrowRight size={16} />
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      </PageContainer>
+    </>
   );
 }
