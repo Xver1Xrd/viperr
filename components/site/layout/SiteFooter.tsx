@@ -23,10 +23,12 @@ const footerLinks = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-[rgba(4,5,10,0.82)]">
+    <footer className="relative border-t border-white/8 bg-[linear-gradient(180deg,rgba(10,8,8,0.96),rgba(8,7,7,1))]">
+      <div className="club-rule absolute inset-x-0 top-0" />
       <PageContainer className="grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
         <div className="space-y-4">
-          <div className="font-display text-2xl tracking-[0.18em] text-white">
+          <div className="club-tag">Archive / links</div>
+          <div className="font-display text-4xl tracking-[0.08em] text-white">
             VIPERR
           </div>
           <p className="max-w-xl text-sm leading-7 text-white/62">
@@ -37,7 +39,7 @@ export function SiteFooter() {
         </div>
 
         <div className="space-y-3">
-          <div className="text-sm font-semibold uppercase tracking-[0.24em] text-white/42">
+          <div className="text-sm font-semibold uppercase tracking-[0.24em] text-[#ff9b73]">
             Навигация
           </div>
           <div className="flex flex-col gap-2">
@@ -54,7 +56,7 @@ export function SiteFooter() {
         </div>
 
         <div className="space-y-3">
-          <div className="text-sm font-semibold uppercase tracking-[0.24em] text-white/42">
+          <div className="text-sm font-semibold uppercase tracking-[0.24em] text-[#ff9b73]">
             Площадки
           </div>
           <div className="flex flex-col gap-2">

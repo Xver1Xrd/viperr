@@ -26,11 +26,11 @@ export function GlobalAudioBar() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 24 }}
           transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-x-4 bottom-4 z-[60] mx-auto max-w-6xl rounded-[28px] border border-white/12 bg-[rgba(9,12,20,0.9)] p-3 shadow-[0_24px_80px_rgba(0,0,0,0.42)] backdrop-blur-2xl"
+          className="surface-card fixed inset-x-4 bottom-4 z-[60] mx-auto max-w-6xl rounded-[24px] p-3 backdrop-blur-xl"
         >
           <div className="grid gap-4 lg:grid-cols-[1.1fr_1.4fr_auto] lg:items-center">
             <div className="flex items-center gap-3">
-              <div className="relative h-16 w-16 overflow-hidden rounded-2xl border border-white/10 bg-white/6">
+              <div className="relative h-16 w-16 overflow-hidden rounded-[16px] border border-white/10 bg-[#120f0f]">
                 <Image
                   src={currentTrack.cover}
                   alt={currentTrack.coverAlt}
@@ -45,7 +45,7 @@ export function GlobalAudioBar() {
                   {currentTrack.title}
                 </div>
                 <div className="truncate text-sm text-white/56">{currentTrack.artistLabel}</div>
-                <div className="mt-1 text-xs uppercase tracking-[0.22em] text-white/38">
+                <div className="mt-1 text-xs uppercase tracking-[0.22em] text-[#ffb998]">
                   {currentTrack.previewLabel}
                 </div>
               </div>
@@ -58,7 +58,7 @@ export function GlobalAudioBar() {
                 max={duration || 30}
                 value={Math.min(currentTime, duration || 30)}
                 onChange={(event) => seek(Number(event.target.value))}
-                className="h-2 w-full cursor-pointer appearance-none rounded-full bg-white/12 accent-white"
+                className="h-2 w-full cursor-pointer appearance-none rounded-full bg-white/10 accent-[#ff5a36]"
                 aria-label="Перемотка аудио-превью"
               />
               <div className="flex items-center justify-between text-xs text-white/44">
@@ -71,7 +71,7 @@ export function GlobalAudioBar() {
               <button
                 type="button"
                 onClick={isPlaying ? pause : resume}
-                className="inline-flex h-12 min-w-12 items-center justify-center rounded-full border border-white/14 bg-white text-slate-950 transition-colors duration-300 hover:bg-slate-100"
+                className="club-button !h-12 !min-w-12 !px-0"
                 aria-label={isPlaying ? "Пауза" : "Воспроизвести"}
               >
                 {isPlaying ? <Pause size={18} /> : <Play size={18} />}
@@ -80,7 +80,7 @@ export function GlobalAudioBar() {
                 href={currentTrack.listenUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/12 bg-white/6 px-4 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
+                className="club-button-secondary"
               >
                 {currentTrack.platformLabel}
                 <ExternalLink size={15} />
@@ -88,7 +88,7 @@ export function GlobalAudioBar() {
               <button
                 type="button"
                 onClick={clear}
-                className="inline-flex h-12 min-w-12 items-center justify-center rounded-full border border-white/12 bg-white/6 text-white transition-colors duration-300 hover:bg-white/10"
+                className="club-icon-button"
                 aria-label="Закрыть плеер"
               >
                 <X size={16} />

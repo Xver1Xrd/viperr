@@ -53,7 +53,7 @@ export default function LinksPage() {
             {linkGroups.map((group, index) => (
               <Reveal key={group.title} delay={index * 0.06}>
                 <div className="surface-card h-full p-6">
-                  <div className="text-xs uppercase tracking-[0.22em] text-white/38">
+                  <div className="club-tag">
                     {group.title}
                   </div>
                   <div className="mt-3 font-display text-3xl text-white">{group.title}</div>
@@ -67,7 +67,7 @@ export default function LinksPage() {
                           <Link
                             key={item.href}
                             href={item.href}
-                            className="block rounded-[22px] border border-white/10 bg-white/5 p-4 transition-colors duration-300 hover:bg-white/8"
+                            className="club-inset block p-4 transition-colors duration-300 hover:bg-[#171111]"
                           >
                             <div className="font-semibold text-white">{item.label}</div>
                             <div className="mt-1 text-sm leading-7 text-white/58">
@@ -83,7 +83,7 @@ export default function LinksPage() {
                           href={item.href}
                           target="_blank"
                           rel="noreferrer"
-                          className="block rounded-[22px] border border-white/10 bg-white/5 p-4 transition-colors duration-300 hover:bg-white/8"
+                          className="club-inset block p-4 transition-colors duration-300 hover:bg-[#171111]"
                         >
                           <div className="flex items-center justify-between gap-3">
                             <div className="font-semibold text-white">{item.label}</div>
@@ -126,12 +126,12 @@ export default function LinksPage() {
                       />
                     </div>
                     <div className="p-6 sm:p-7">
-                      <div className="text-xs uppercase tracking-[0.22em] text-white/38">
+                      <div className="club-tag">
                         {artist.eyebrow}
                       </div>
                       <div className="mt-3 font-display text-4xl text-white">{artist.name}</div>
                       <p className="mt-4 text-sm leading-7 text-white/64">{artist.tagline}</p>
-                      <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white">
+                      <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#ffb998]">
                         Открыть страницу
                         <ArrowRight size={16} />
                       </div>
@@ -160,7 +160,7 @@ export default function LinksPage() {
           ].map((item, index) => (
             <Reveal key={item.title} delay={index * 0.05}>
               <div className="surface-card h-full p-6">
-                <div className="text-xs uppercase tracking-[0.22em] text-white/38">Why it works</div>
+                <div className="club-tag">Why it works</div>
                 <div className="mt-3 font-display text-3xl text-white">{item.title}</div>
                 <p className="mt-3 text-sm leading-7 text-white/64">{item.text}</p>
               </div>

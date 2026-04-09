@@ -56,10 +56,7 @@ export function GalleryMasonry({ items }: GalleryMasonryProps) {
               setActiveId(null);
             }}
             className={cn(
-              "rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-300",
-              filter === item.key
-                ? "border-white/16 bg-white text-slate-950"
-                : "border-white/12 bg-white/6 text-white/74 hover:bg-white/10 hover:text-white",
+              filter === item.key ? "club-chip-active" : "club-chip",
             )}
           >
             {item.label}
@@ -74,7 +71,7 @@ export function GalleryMasonry({ items }: GalleryMasonryProps) {
             type="button"
             onClick={() => setActiveId(item.id)}
             className={cn(
-              "group relative overflow-hidden rounded-[28px] border border-white/10 bg-white/6 text-left shadow-[0_24px_70px_rgba(0,0,0,0.22)]",
+              "surface-card group relative overflow-hidden rounded-[24px] text-left shadow-[0_24px_70px_rgba(0,0,0,0.22)]",
               item.size === "wide" && "xl:col-span-2",
               item.size === "portrait" && "md:row-span-2 md:auto-rows-[240px]",
             )}
@@ -102,14 +99,14 @@ export function GalleryMasonry({ items }: GalleryMasonryProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[70] bg-[rgba(4,6,12,0.94)] p-4 backdrop-blur-xl"
+            className="fixed inset-0 z-[70] bg-[rgba(8,7,7,0.94)] p-4 backdrop-blur-xl"
           >
             <div className="mx-auto flex h-full max-w-6xl flex-col justify-center gap-4">
               <div className="flex items-center justify-end gap-2">
                 <button
                   type="button"
                   onClick={showPrev}
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/12 bg-white/6 text-white transition-colors duration-300 hover:bg-white/10"
+                  className="club-icon-button"
                   aria-label="Предыдущее изображение"
                 >
                   <ChevronLeft size={18} />
@@ -117,7 +114,7 @@ export function GalleryMasonry({ items }: GalleryMasonryProps) {
                 <button
                   type="button"
                   onClick={showNext}
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/12 bg-white/6 text-white transition-colors duration-300 hover:bg-white/10"
+                  className="club-icon-button"
                   aria-label="Следующее изображение"
                 >
                   <ChevronRight size={18} />
@@ -125,7 +122,7 @@ export function GalleryMasonry({ items }: GalleryMasonryProps) {
                 <button
                   type="button"
                   onClick={() => setActiveId(null)}
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/12 bg-white/6 text-white transition-colors duration-300 hover:bg-white/10"
+                  className="club-icon-button"
                   aria-label="Закрыть lightbox"
                 >
                   <X size={18} />
@@ -133,7 +130,7 @@ export function GalleryMasonry({ items }: GalleryMasonryProps) {
               </div>
 
               <div className="grid flex-1 items-center gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-                <div className="relative overflow-hidden rounded-[32px] border border-white/12 bg-[#0b1019]">
+                <div className="surface-card relative overflow-hidden rounded-[24px] bg-[#0b0a0a]">
                   <div className="relative aspect-[4/3] min-h-[320px]">
                     <Image
                       src={activeItem.src}
@@ -145,13 +142,13 @@ export function GalleryMasonry({ items }: GalleryMasonryProps) {
                   </div>
                 </div>
 
-                <div className="space-y-4 rounded-[28px] border border-white/12 bg-white/6 p-6">
-                  <div className="text-xs uppercase tracking-[0.22em] text-white/40">
+                <div className="surface-card space-y-4 rounded-[24px] p-6">
+                  <div className="club-tag">
                     {activeItem.tone}
                   </div>
                   <div className="font-display text-4xl text-white">{activeItem.title}</div>
                   <p className="text-base leading-8 text-white/68">{activeItem.caption}</p>
-                  <div className="rounded-[20px] border border-white/10 bg-white/5 p-4 text-sm leading-7 text-white/58">
+                  <div className="club-inset p-4 text-sm leading-7 text-white/58">
                     Эта галерея собрана из реальных файлов внутри проекта: официальных artist-изображений,
                     видео-кадров и обложек релизов.
                   </div>

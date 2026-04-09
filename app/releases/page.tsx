@@ -69,7 +69,7 @@ export default function ReleasesPage() {
           ].map((item, index) => (
             <Reveal key={item.title} delay={index * 0.05}>
               <div className="surface-card h-full p-6">
-                <div className="text-xs uppercase tracking-[0.22em] text-white/38">Archive note</div>
+                <div className="club-tag">Archive note</div>
                 <div className="mt-3 font-display text-3xl text-white">{item.title}</div>
                 <p className="mt-3 text-sm leading-7 text-white/64">{item.text}</p>
               </div>

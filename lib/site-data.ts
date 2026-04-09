@@ -138,14 +138,14 @@ export const artists: Record<ArtistSlug, ArtistProfile> = {
       "Страница Kai Angel построена вокруг сольной траектории артиста: от ранних релизов к более крупным и собранным работам. Здесь нет фанатской мишуры и выдуманных историй, только релизы, визуалы и быстрые переходы на официальные площадки.",
     heroQuote:
       "Сильная сторона Kai Angel не только в треках, но и в умении собирать вокруг музыки цельный образ.",
-    image: "/media/artists/kai-angel-portrait.jpg",
-    imageAlt: "Kai Angel, официальное изображение из Apple Music",
-    heroImage: "/media/gallery/kai-video-still.jpg",
-    heroImageAlt: "Kai Angel, кадр из видео",
+    image: "/media/artists/kai-angel-user.jpg",
+    imageAlt: "Kai Angel, выбранное пользовательское фото",
+    heroImage: "/media/artists/kai-angel-user.jpg",
+    heroImageAlt: "Kai Angel, выбранное пользовательское фото",
     stats: [
       { label: "Релизов в подборке", value: "5" },
       { label: "Ключевые страницы", value: "релизы / галерея / ссылки" },
-      { label: "Треки и архивные ссылки", value: "4" },
+      { label: "Рабочих превью", value: "4" },
     ],
     features: [
       {
@@ -162,7 +162,7 @@ export const artists: Record<ArtistSlug, ArtistProfile> = {
       },
     ],
     releaseIds: ["damage", "god-system", "angel-may-cry", "heavy-metal-2", "heavy-metal"],
-    previewTrackIds: ["body-double", "whats-upppppp", "my-sweet-lullaby", "angryy"],
+    previewTrackIds: ["body-double", "jump", "god-system-track", "welcome-to-forever"],
     galleryIds: ["kai-artist", "kai-still", "damage-cover", "god-system-cover", "angel-cover"],
     links: [
       {
@@ -198,11 +198,11 @@ export const artists: Record<ArtistSlug, ArtistProfile> = {
       "На этой странице акцент сделан на сольной линии 9mice и на том, как его подача соединяет клубную скорость, холодную мелодию и очень уверенный поп-хук. Материал собран так, чтобы было удобно и слушать, и переходить на официальные платформы.",
     heroQuote:
       "9mice лучше всего работает там, где энергия остаётся жёсткой, а мелодия всё равно цепляет с первого включения.",
-    image: "/media/artists/9mice-portrait.jpg",
-    imageAlt: "9mice, официальное изображение из Apple Music",
+    image: "/media/artists/9mice-user.jpg",
+    imageAlt: "9mice, выбранное пользовательское фото",
     stats: [
       { label: "Релизов в подборке", value: "6" },
-      { label: "Треки и платформы", value: "4" },
+      { label: "Рабочих превью", value: "4" },
       { label: "Основной акцент", value: "club / hook / image" },
     ],
     features: [
@@ -220,7 +220,7 @@ export const artists: Record<ArtistSlug, ArtistProfile> = {
       },
     ],
     releaseIds: ["9mm", "heavy-metal-2", "your-love", "orpheus", "soloist", "heavy-metal"],
-    previewTrackIds: ["mmw", "avril-lavigne", "gosha-rubchinskiy", "kill-bill"],
+    previewTrackIds: ["mmw", "your-love-track", "gosha-rubchinskiy", "kill-bill"],
     galleryIds: ["9mice-artist", "duo-portrait", "9mm-cover", "orpheus-cover", "soloist-cover"],
     links: [
       {
@@ -432,6 +432,48 @@ export const previewTracks: PreviewTrack[] = [
     coverAlt: "Обложка damage",
   },
   {
+    id: "jump",
+    title: "JUMP!",
+    artistLabel: "Kai Angel",
+    artistKey: "kai-angel",
+    note: "Рабочее 30-секундное превью из ANGEL MAY CRY. Быстрый и понятный вход в более ранний сольный материал Kai Angel.",
+    previewLabel: "Apple Music preview · 00:30",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f1/57/29/f157296a-153d-0031-4f89-944a942369ad/mzaf_12106263820482462520.plus.aac.p.m4a",
+    listenUrl: "https://open.spotify.com/track/5uX7sUKp3kKgYGCkKLGlY4",
+    platformLabel: "Spotify",
+    cover: "/media/covers/angel-may-cry.jpg",
+    coverAlt: "Обложка ANGEL MAY CRY",
+  },
+  {
+    id: "god-system-track",
+    title: "GOD SYSTEM",
+    artistLabel: "Kai Angel",
+    artistKey: "kai-angel",
+    note: "Рабочее превью из крупного сольного альбома Kai Angel. Подходит для страницы лучше, чем немые внешние карточки.",
+    previewLabel: "Apple Music preview · 00:30",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/66/90/d1/6690d146-7dce-ea5d-2931-f5c28c4dd37b/mzaf_8471135285195264430.plus.aac.p.m4a",
+    listenUrl: "https://open.spotify.com/album/4mOYvmMHqKHT81fcWBOFuF",
+    platformLabel: "Spotify",
+    cover: "/media/covers/god-system.jpg",
+    coverAlt: "Обложка GOD SYSTEM",
+  },
+  {
+    id: "welcome-to-forever",
+    title: "welcome to forever",
+    artistLabel: "Kai Angel",
+    artistKey: "kai-angel",
+    note: "Ещё одно рабочее превью Kai Angel, уже из более позднего периода. На странице теперь только реальные прослушиваемые карточки.",
+    previewLabel: "Apple Music preview · 00:30",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/93/75/77/93757752-409e-1e9e-02da-af6f69515c54/mzaf_4440295897619256944.plus.aac.p.m4a",
+    listenUrl: "https://open.spotify.com/album/77gELhxARvEp3QeI9CHTPw",
+    platformLabel: "Spotify",
+    cover: "/media/covers/damage.jpg",
+    coverAlt: "Обложка damage",
+  },
+  {
     id: "whats-upppppp",
     title: "what's uppppppxddDDD",
     artistLabel: "Kai Angel",
@@ -440,7 +482,7 @@ export const previewTracks: PreviewTrack[] = [
     previewLabel: "SoundCloud link · без встроенного аудио",
     listenUrl: "https://soundcloud.com/4ngelkai/whats-uppppppxddddd",
     platformLabel: "SoundCloud",
-    cover: "/media/artists/kai-angel-portrait.jpg",
+    cover: "/media/artists/kai-angel-user.jpg",
     coverAlt: "Kai Angel",
   },
   {
@@ -478,8 +520,22 @@ export const previewTracks: PreviewTrack[] = [
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5b/f5/0f/5bf50f44-21c8-af6d-75f6-c1baea32b99b/mzaf_8210116308552012983.plus.aac.p.m4a",
     listenUrl: "https://open.spotify.com/track/3mvqKKyF6rgYd52bBSCTza",
     platformLabel: "Spotify",
-    cover: "/media/artists/9mice-portrait.jpg",
+    cover: "/media/artists/9mice-user.jpg",
     coverAlt: "9mice",
+  },
+  {
+    id: "your-love-track",
+    title: "your love",
+    artistLabel: "9mice",
+    artistKey: "9mice",
+    note: "Рабочее превью сольного трека 9mice с более мягкой мелодикой. Заменяет карточку без звука, чтобы весь блок реально воспроизводился.",
+    previewLabel: "Apple Music preview · 00:30",
+    previewUrl:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e1/06/10/e106101f-2b5e-048e-c469-b7e2c03b6b82/mzaf_2497123240899110376.plus.aac.p.m4a",
+    listenUrl: "https://open.spotify.com/track/2H2ekprtLWD4djsHw7Aa2Q",
+    platformLabel: "Spotify",
+    cover: "/media/covers/your-love.jpg",
+    coverAlt: "Обложка Your Love",
   },
   {
     id: "avril-lavigne",
@@ -490,7 +546,7 @@ export const previewTracks: PreviewTrack[] = [
     previewLabel: "Spotify link · без встроенного аудио",
     listenUrl: "https://open.spotify.com/track/6wYaBjCIB4xrtiT83GVc1w",
     platformLabel: "Spotify",
-    cover: "/media/artists/9mice-portrait.jpg",
+    cover: "/media/artists/9mice-user.jpg",
     coverAlt: "9mice",
   },
   {
@@ -504,7 +560,7 @@ export const previewTracks: PreviewTrack[] = [
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/61/d6/11/61d61161-8277-9acb-5f38-731d0f86a857/mzaf_15218783780857868765.plus.aac.p.m4a",
     listenUrl: "https://open.spotify.com/track/3gqQlyorpm7mZOK6cgrO2U",
     platformLabel: "Spotify",
-    cover: "/media/artists/9mice-portrait.jpg",
+    cover: "/media/artists/9mice-user.jpg",
     coverAlt: "9mice",
   },
   {
@@ -537,8 +593,8 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "kai-artist",
     title: "Kai Angel",
-    caption: "Официальное изображение артиста из Apple Music.",
-    src: "/media/artists/kai-angel-portrait.jpg",
+    caption: "Выбранное фото Kai Angel для всех основных блоков сайта.",
+    src: "/media/artists/kai-angel-user.jpg",
     alt: "Kai Angel",
     category: "artists",
     tone: "Artist profile",
@@ -547,8 +603,8 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "9mice-artist",
     title: "9mice",
-    caption: "Официальное изображение артиста из Apple Music.",
-    src: "/media/artists/9mice-portrait.jpg",
+    caption: "Выбранное фото 9mice для artist-блоков и галереи.",
+    src: "/media/artists/9mice-user.jpg",
     alt: "9mice",
     category: "artists",
     tone: "Artist profile",
@@ -556,12 +612,12 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "kai-still",
-    title: "Kai video still",
-    caption: "Видео-кадр, который помогает разбавить галерею не только обложками, но и живым визуалом.",
-    src: "/media/gallery/kai-video-still.jpg",
-    alt: "Видео-кадр Kai Angel",
+    title: "Kai Angel portrait",
+    caption: "То же фото Kai Angel использовано и в gallery-слое, чтобы образ был везде единым.",
+    src: "/media/artists/kai-angel-user.jpg",
+    alt: "Портрет Kai Angel",
     category: "stills",
-    tone: "Video still",
+    tone: "Portrait",
     size: "wide",
   },
   {
@@ -657,7 +713,7 @@ export const galleryItems: GalleryItem[] = [
 ];
 
 export const homeFeaturedReleaseIds = ["heavy-metal-2", "damage", "9mm"];
-export const homePreviewTrackIds = ["body-double", "whats-upppppp", "mmw", "gosha-rubchinskiy"];
+export const homePreviewTrackIds = ["body-double", "jump", "mmw", "gosha-rubchinskiy"];
 export const homeGalleryIds = ["duo-portrait", "kai-artist", "9mice-artist", "kai-still"];
 
 export const linkGroups: LinkGroup[] = [

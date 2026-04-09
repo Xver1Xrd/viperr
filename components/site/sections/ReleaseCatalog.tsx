@@ -36,10 +36,7 @@ export function ReleaseCatalog({ releases }: ReleaseCatalogProps) {
             type="button"
             onClick={() => setActiveFilter(filter.key)}
             className={cn(
-              "rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-300",
-              activeFilter === filter.key
-                ? "border-white/16 bg-white text-slate-950"
-                : "border-white/12 bg-white/6 text-white/74 hover:bg-white/10 hover:text-white",
+              activeFilter === filter.key ? "club-chip-active" : "club-chip",
             )}
           >
             {filter.label}

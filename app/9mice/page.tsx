@@ -54,11 +54,11 @@ export default function NineMicePage() {
       <PageContainer className="section-space space-y-24">
         <section className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <Reveal className="surface-card p-6 sm:p-8">
-            <div className="text-xs uppercase tracking-[0.24em] text-white/40">Подача 9mice</div>
+            <div className="club-tag">Подача 9mice</div>
             <p className="mt-4 text-base leading-8 text-white/68">{artist.intro}</p>
             <div className="mt-8 grid gap-3">
               {artist.features.map((feature) => (
-                <div key={feature.title} className="rounded-[22px] border border-white/10 bg-white/5 p-4">
+                <div key={feature.title} className="club-inset p-4">
                   <div className="font-display text-2xl text-white">{feature.title}</div>
                   <p className="mt-2 text-sm leading-7 text-white/62">{feature.text}</p>
                 </div>
@@ -82,7 +82,7 @@ export default function NineMicePage() {
                     </div>
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-[0.22em] text-white/40">
+                    <div className="club-tag">
                       {release.dateLabel}
                     </div>
                     <div className="mt-2 font-display text-3xl text-white">{release.title}</div>
@@ -91,7 +91,7 @@ export default function NineMicePage() {
                       href={release.spotifyUrl ?? release.appleUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-full border border-white/12 bg-white/6 px-4 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
+                      className="club-button-secondary mt-5"
                     >
                       {release.spotifyUrl ? "Открыть в Spotify" : "Открыть в Apple Music"}
                       <ExternalLink size={15} />
@@ -106,8 +106,8 @@ export default function NineMicePage() {
         <section id="audio" className="space-y-10">
           <SectionHeading
             eyebrow="Audio"
-            title="Треки и площадки 9mice"
-            description="Здесь собраны три встроенных Apple Music-превью и один прямой внешний переход для трека, у которого на сайте не подтверждён отдельный фрагмент. Интерфейс остаётся честным: без фейкового play и псевдо-waveform."
+            title="Рабочие превью 9mice"
+            description="В подборке ниже оставлены только треки с реальным звуком. Все карточки можно включить прямо на странице без пустых внешних заглушек."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {tracks.map((track, index) => (
@@ -127,7 +127,7 @@ export default function NineMicePage() {
             />
             <Link
               href="/releases"
-              className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/12 bg-white/6 px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
+              className="club-button-secondary"
             >
               Полный каталог
               <ArrowRight size={16} />

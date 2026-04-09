@@ -39,7 +39,7 @@ export default function HomePage() {
           eyebrow="Multi-page music project"
           title="Kai Angel + 9mice"
           description="VIPERR собирает в одном месте ключевые релизы, отдельные страницы артистов, рабочие Apple Music-превью, Spotify-маршруты, архивные внешние ссылки, галерею и быстрые переходы на официальные площадки. Это не одностраничный концепт, а готовый музыкальный сайт с понятной структурой."
-          quote="На сайте нет фальшивого плеера: если у карточки есть встроенное превью, оно реально играет. Если превью нет, карточка честно ведёт на внешнюю платформу."
+          quote="На сайте нет фальшивого плеера: если у карточки есть кнопка play, она запускает реальное официальное превью."
           image="/media/artists/duo-bandlink.jpeg"
           imageAlt="Kai Angel и 9mice"
           accent="violet"
@@ -90,7 +90,7 @@ export default function HomePage() {
             />
             <Link
               href="/releases"
-              className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/12 bg-white/6 px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
+              className="club-button-secondary"
             >
               Весь каталог
               <ArrowRight size={16} />
@@ -109,7 +109,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Listen"
             title="Подборка для прослушивания"
-            description="В блоке ниже собраны и встроенные Apple Music-превью, и прямые переходы на внешние платформы. Формат каждой карточки показан честно, без поддельного play."
+            description="На главной оставлены только рабочие карточки с реальным звуком. Каждая кнопка play ниже запускает официальное preview-аудио."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {featuredTracks.map((track, index) => (
@@ -129,7 +129,7 @@ export default function HomePage() {
             />
             <Link
               href="/gallery"
-              className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/12 bg-white/6 px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
+              className="club-button-secondary"
             >
               Полная галерея
               <ArrowRight size={16} />
@@ -164,7 +164,7 @@ export default function HomePage() {
               <Reveal className="surface-card overflow-hidden">
                 <div className="relative aspect-[16/10]">
                   <Image
-                    src={galleryPreview[2]?.src ?? "/media/artists/9mice-portrait.jpg"}
+                    src={galleryPreview[2]?.src ?? "/media/artists/9mice-user.jpg"}
                     alt={galleryPreview[2]?.alt ?? "9mice"}
                     fill
                     sizes="(max-width: 1024px) 100vw, 33vw"
@@ -183,7 +183,7 @@ export default function HomePage() {
               </Reveal>
 
               <Reveal delay={0.06} className="surface-card p-6 sm:p-7">
-                <div className="text-xs uppercase tracking-[0.24em] text-white/38">
+                <div className="club-tag">
                   Что внутри
                 </div>
                 <div className="mt-4 space-y-4">
@@ -246,9 +246,10 @@ export default function HomePage() {
                   <div className="text-xs uppercase tracking-[0.22em] text-white/38">
                     Internal route
                   </div>
-                  <div className="mt-3 font-display text-3xl text-white">{item.title}</div>
+                  <div className="club-rule mt-3 w-20" />
+                  <div className="mt-4 font-display text-3xl text-white">{item.title}</div>
                   <p className="mt-3 text-sm leading-7 text-white/64">{item.text}</p>
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-white">
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#ffb998]">
                     Перейти
                     <ArrowRight size={16} />
                   </div>

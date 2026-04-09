@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Manrope } from "next/font/google";
+import { Manrope, Oswald } from "next/font/google";
 import { GlobalAudioBar } from "@/components/site/audio/GlobalAudioBar";
 import { AudioPreviewProvider } from "@/components/site/audio/AudioPreviewProvider";
 import { SiteFooter } from "@/components/site/layout/SiteFooter";
@@ -7,9 +7,9 @@ import { SiteHeader } from "@/components/site/layout/SiteHeader";
 import { siteUrl } from "@/lib/site-data";
 import "./globals.css";
 
-const bricolageGrotesque = Bricolage_Grotesque({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-bricolage",
+const oswald = Oswald({
+  subsets: ["latin", "latin-ext", "cyrillic"],
+  variable: "--font-oswald",
   display: "swap",
 });
 
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#05060a",
+  themeColor: "#080707",
   colorScheme: "dark",
 };
 
@@ -77,7 +77,7 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
-      className={`${bricolageGrotesque.variable} ${manrope.variable} h-full scroll-smooth`}
+      className={`${oswald.variable} ${manrope.variable} h-full scroll-smooth`}
     >
       <body className="min-h-full bg-background font-sans text-foreground antialiased">
         <AudioPreviewProvider>
@@ -88,9 +88,10 @@ export default function RootLayout({
             Перейти к контенту
           </a>
           <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-            <div className="absolute left-[-10rem] top-10 h-[28rem] w-[28rem] rounded-full bg-[radial-gradient(circle,rgba(139,92,246,0.18),transparent_70%)] blur-3xl" />
-            <div className="absolute right-[-12rem] top-[12rem] h-[32rem] w-[32rem] rounded-full bg-[radial-gradient(circle,rgba(34,211,238,0.14),transparent_70%)] blur-3xl" />
-            <div className="absolute bottom-[-12rem] left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(244,63,94,0.12),transparent_70%)] blur-3xl" />
+            <div className="absolute left-[-12rem] top-0 h-[34rem] w-[34rem] rounded-full bg-[radial-gradient(circle,rgba(255,84,44,0.26),transparent_68%)] blur-[130px]" />
+            <div className="absolute right-[-10rem] top-[18rem] h-[28rem] w-[28rem] rounded-full bg-[radial-gradient(circle,rgba(255,180,58,0.14),transparent_68%)] blur-[110px]" />
+            <div className="absolute bottom-[-14rem] left-[18%] h-[32rem] w-[32rem] rounded-full bg-[radial-gradient(circle,rgba(77,124,255,0.12),transparent_72%)] blur-[140px]" />
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#ff5a36]/60 to-transparent" />
           </div>
           <SiteHeader />
           <main id="content" className="relative overflow-x-clip pb-28">

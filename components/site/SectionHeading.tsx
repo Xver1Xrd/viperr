@@ -14,16 +14,16 @@ export function SectionHeading({
   className,
 }: SectionHeadingProps) {
   return (
-    <div className={cn("max-w-3xl space-y-4", className)}>
+    <div className={cn("max-w-4xl space-y-5", className)}>
       {eyebrow ? (
-        <div className="text-xs font-semibold uppercase tracking-[0.28em] text-white/44">
+        <div className="club-tag">
           {eyebrow}
         </div>
       ) : null}
-      <h2 className="font-display text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
+      <h2 className="club-title font-display text-4xl leading-[0.92] text-white sm:text-5xl lg:text-6xl">
         {title}
       </h2>
-      <p className="text-base leading-8 text-white/66 sm:text-lg">{description}</p>
+      <p className="max-w-3xl text-base leading-8 text-white/68 sm:text-lg">{description}</p>
     </div>
   );
 }

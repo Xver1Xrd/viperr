@@ -18,30 +18,31 @@ export function TrackPreviewCard({ track }: TrackPreviewCardProps) {
   const progress = hasPreview && active && duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <article className="overflow-hidden rounded-[28px] border border-white/10 bg-white/6 p-5 shadow-[0_24px_70px_rgba(0,0,0,0.24)]">
+    <article className="surface-card relative overflow-hidden rounded-[24px] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.24)]">
+      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#ff5a36] via-[#ffb43a] to-transparent" />
       <div className="flex items-start gap-4">
-        <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-[20px] border border-white/10 bg-white/8">
+        <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-[16px] border border-white/10 bg-[#120f0f]">
           <Image src={track.cover} alt={track.coverAlt} fill sizes="80px" className="object-cover" />
         </div>
 
         <div className="min-w-0 flex-1">
-          <div className="text-xs font-semibold uppercase tracking-[0.22em] text-white/40">
+          <div className="club-tag inline-flex">
             {track.previewLabel}
           </div>
-          <h3 className="mt-2 truncate font-display text-2xl text-white">{track.title}</h3>
-          <p className="text-sm text-white/54">{track.artistLabel}</p>
+          <h3 className="mt-3 truncate font-display text-3xl leading-[0.94] text-white">{track.title}</h3>
+          <p className="text-sm uppercase tracking-[0.12em] text-white/54">{track.artistLabel}</p>
         </div>
       </div>
 
-      <p className="mt-5 text-sm leading-7 text-white/66">{track.note}</p>
+      <p className="mt-5 text-sm leading-7 text-white/68">{track.note}</p>
 
       {hasPreview ? (
         <>
-          <div className="mt-5 overflow-hidden rounded-full bg-white/10">
+          <div className="mt-5 overflow-hidden rounded-full bg-white/8">
             <motion.div
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.16, ease: "linear" }}
-              className="h-2 rounded-full bg-white"
+              className="h-2 rounded-full bg-gradient-to-r from-[#ff5a36] to-[#ffb43a]"
             />
           </div>
 
@@ -51,7 +52,7 @@ export function TrackPreviewCard({ track }: TrackPreviewCardProps) {
           </div>
         </>
       ) : (
-        <div className="mt-5 rounded-[18px] border border-white/10 bg-white/5 px-4 py-3 text-xs uppercase tracking-[0.18em] text-white/42">
+        <div className="club-inset mt-5 px-4 py-3 text-xs uppercase tracking-[0.18em] text-white/42">
           Без встроенного аудио на сайте
         </div>
       )}
@@ -63,10 +64,7 @@ export function TrackPreviewCard({ track }: TrackPreviewCardProps) {
               type="button"
               onClick={() => toggleTrack(track)}
               className={cn(
-                "inline-flex min-h-12 items-center gap-2 rounded-full px-5 text-sm font-semibold transition-all duration-300",
-                active
-                  ? "border border-white/16 bg-white text-slate-950 hover:bg-slate-100"
-                  : "border border-white/12 bg-white/6 text-white hover:bg-white/10",
+                active ? "club-button" : "club-button-secondary",
               )}
             >
               {active && isPlaying ? <Pause size={16} /> : <Play size={16} />}
@@ -76,7 +74,7 @@ export function TrackPreviewCard({ track }: TrackPreviewCardProps) {
               href={track.listenUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex min-h-12 items-center rounded-full border border-white/12 bg-transparent px-5 text-sm font-semibold text-white/76 transition-all duration-300 hover:bg-white/8 hover:text-white"
+              className="club-button-secondary"
             >
               {track.platformLabel}
             </a>
@@ -86,7 +84,7 @@ export function TrackPreviewCard({ track }: TrackPreviewCardProps) {
             href={track.listenUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex min-h-12 items-center rounded-full border border-white/16 bg-white px-5 text-sm font-semibold text-slate-950 transition-all duration-300 hover:bg-slate-100"
+            className="club-button"
           >
             Открыть на {track.platformLabel}
           </a>

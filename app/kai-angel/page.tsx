@@ -54,11 +54,11 @@ export default function KaiAngelPage() {
       <PageContainer className="section-space space-y-24">
         <section className="grid gap-6 xl:grid-cols-[0.82fr_1.18fr]">
           <Reveal className="surface-card p-6 sm:p-8">
-            <div className="text-xs uppercase tracking-[0.24em] text-white/40">Об этой странице</div>
+            <div className="club-tag">Об этой странице</div>
             <p className="mt-4 text-base leading-8 text-white/68">{artist.intro}</p>
             <Link
               href="/links"
-              className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full border border-white/12 bg-white/6 px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
+              className="club-button-secondary mt-8"
             >
               Все площадки
               <ArrowRight size={16} />
@@ -69,7 +69,7 @@ export default function KaiAngelPage() {
             {artist.features.map((feature, index) => (
               <Reveal key={feature.title} delay={index * 0.06}>
                 <div className="surface-card h-full p-6">
-                  <div className="text-xs uppercase tracking-[0.22em] text-white/38">Focus</div>
+                  <div className="club-tag">Focus</div>
                   <h2 className="mt-3 font-display text-2xl text-white">{feature.title}</h2>
                   <p className="mt-3 text-sm leading-7 text-white/64">{feature.text}</p>
                 </div>
@@ -96,8 +96,8 @@ export default function KaiAngelPage() {
         <section className="space-y-10">
           <SectionHeading
             eyebrow="Audio"
-            title="Треки и прямые переходы Kai Angel"
-            description="В блоке собраны один встроенный Apple Music-фрагмент и три честные внешние ссылки на треки, которые ты просил вывести на страницу. Если кнопка играет звук, значит звук реально есть на сайте."
+            title="Рабочие превью Kai Angel"
+            description="Здесь оставлены только треки с реальным встроенным звуком. Все четыре карточки ниже запускают рабочие 30-секундные preview-фрагменты."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {tracks.map((track, index) => (
@@ -117,7 +117,7 @@ export default function KaiAngelPage() {
             />
             <Link
               href="/gallery"
-              className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/12 bg-white/6 px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white/10"
+              className="club-button-secondary"
             >
               Полная галерея
               <ArrowRight size={16} />
